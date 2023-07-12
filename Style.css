@@ -28,7 +28,7 @@
 
 .hero{
     height: 650px;
-    background-image: url("https://spaces.w3schools.com/images/HVYepJYeHdQ.jpg");
+    background-image: url("TeamPhoto.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -264,7 +264,7 @@ html {
 @media screen and (max-width: 1500px) {
     .hero{
         height: 550px !important;;
-        background-image: url("https://spaces.w3schools.com/images/HVYepJYeHdQ_1200_600.jpg");
+        background-image: url("TeamPhoto.JPG");
     }
     .hero-description{
         height: 550px
@@ -364,7 +364,7 @@ html {
     }
     .hero{
         height: 450px !important;
-        background-image: url("https://spaces.w3schools.com/images/HVYepJYeHdQ_480_300.jpg");
+        background-image: url("TeamPhoto.JPG");
     }
     .hero-description{
         height: 450px;
