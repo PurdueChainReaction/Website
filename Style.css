@@ -372,7 +372,7 @@ html {
     .join-list{
         margin:  30px;
         padding: 20px;
-        height: 125px;
+        height: 150px;
         width: 1080px;
         display: flex;
         flex-direction: column;
@@ -522,7 +522,7 @@ html {
         
     }
     .history-list{
-        height: 1275px;
+        height: 1300px;
         margin: 20px;
         overflow: hidden;
         border-top: none;
@@ -797,7 +797,7 @@ html {
 
     }
     h5{
-        font-size: 15px;
+        font-size: 12px;
     }
     .badge{
 
