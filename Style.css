@@ -9,6 +9,19 @@
     
 
 }
+
+#background-video {
+    width: 100vw;
+    height: 900px;
+    object-fit: cover;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
 .heeder-large-screen{
     display: flex !important;
     justify-content: space-evenly !important;
@@ -27,17 +40,18 @@
 }
 
 .hero{
-    height: 650px;
-    background-image: url("TeamPhoto.JPG");
+    height: 900px;
+    /*background-image: url("BCR2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
     background-color: #000015; 
+    */
 
     
 }
 .hero-description{
-    height: 650px;
+    height: 900px;
     background-color: rgba(0, 0, 21, .7);
     display: flex;
 }
@@ -108,7 +122,7 @@ h3{
 .machine-list{
     margin: 30px;;
     padding: 20px;
-    height: 200px;
+    height: 250px;
     width:  1200px;
     display: flex;
     flex-direction: column;
@@ -313,8 +327,19 @@ html {
 @media screen and (max-width: 1500px) {
     .hero{
         height: 550px !important;;
-        background-image: url("TeamPhoto.JPG");
+        /*background-image: url("TeamPhoto.JPG")*/;
     }
+    #background-video {
+        width: 100vw;
+        height: 550px;
+        object-fit: cover;
+        position:absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
     .hero-description{
         height: 550px
     }
@@ -331,7 +356,7 @@ html {
     .machine-list{
         margin: 30px;;
         width: 1080px;
-        height: 225px;
+        height: 275px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -406,7 +431,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 230px;
+        height: 280px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -464,7 +489,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 275px;
+        height: 325px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -523,8 +548,19 @@ html {
     }
     .hero{
         height: 400px !important;
-        background-image: url("TeamPhoto.JPG");
+        /*background-image: url("TeamPhoto.JPG");*/
     }
+    #background-video {
+        width: 100vw;
+        height: 400px;
+        object-fit: cover;
+        position:absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
     .hero-description{
         height: 400px;
         background-color: rgba(0, 0, 21, .7);
@@ -546,7 +582,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 350px;
+        height: 375px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -643,8 +679,19 @@ html {
     }
     .hero{
         height: 600px !important;
-        background-image: url("TeamPhoto.JPG");
+        /*background-image: url("TeamPhoto.JPG");*/
     }
+    #background-video {
+        width: 100vw;
+        height: 600px;
+        object-fit: cover;
+        position:absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
     .hero-description{
         height: 600px;
         background-color: rgba(0, 0, 21, .7);
@@ -665,7 +712,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 750px;
+        height: 800px;
         display: flex;
         flex-direction: column;
         align-items: center;
