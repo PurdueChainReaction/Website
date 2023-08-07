@@ -97,7 +97,7 @@ h3{
     text-align: center;
 }
 
-.games{
+.machine{
     display: flex;
     
     flex-wrap: wrap;
@@ -105,11 +105,11 @@ h3{
     /* background-color:	rgba(0, 0, 47,0.3); */
     justify-content: space-evenly;
 }
-.game-list{
+.machine-list{
     margin: 30px;;
     padding: 20px;
-    height: 200px;
-    width:250px;
+    height: 300px;
+    width:  700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,21 +121,49 @@ h3{
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.game-list:hover{
+.machine-list:hover{
+    transform: scale(1.05);
+}
+
+.join{
+    display: flex;
+    
+    flex-wrap: wrap;
+    align-items: center;
+    /* background-color:	rgba(0, 0, 47,0.3); */
+    justify-content: space-evenly;
+}
+.join-list{
+    margin: 30px;;
+    padding: 20px;
+    height: 200px;
+    width:  700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid gray;
+    background: rgba(255, 75, 255, 0.1);
+    box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.join-list:hover{
     transform: scale(1.05);
 }
 .store{
     margin-top: 50px;
 }
-.game-store{
+.history{
     margin-top: 20px !important;
 display: flex;
 justify-content: space-evenly;
 flex-wrap: wrap;
 }
 .game-image{
-    width:300px;
-    height: 180px;
+    width:700px;
+    height:300px;
     
 }
 .game-image img{
@@ -143,9 +171,30 @@ flex-wrap: wrap;
     height: 100%;
     object-fit: cover;
 }
-.game-store-list{
-    width:300px;
-    height: 300px;
+.history-list{
+    width:  700px;
+    height: 900px;
+     margin: 20px;
+    overflow: hidden;
+    border-top: none;
+    
+      -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+              box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-bottom: 1px solid blueviolet;
+    color:white;
+     
+}
+.outreach{
+    margin-top: 20px !important;
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+.outreach-list{
+    width:  700px;
+    height: 100x;
      margin: 20px;
     overflow: hidden;
     border-top: none;
