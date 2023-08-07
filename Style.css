@@ -173,7 +173,7 @@ h3{
 }
 .history-list{
     width:  1200px;
-    height: 850px;
+    height: 900px;
      margin: 20px;
     overflow: hidden;
     border-top: none;
@@ -231,7 +231,7 @@ h4{
     
 }
 .event-text{
-    width:90%;
+    width:70%;
     color: orange;
 
 }
@@ -323,13 +323,15 @@ html {
     }
 }
 /*Large Tablet screen*/
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 2560px) {
     main{
         width:100% !important;
         margin: auto !important;
     }
     .machine-list{
         margin: 30px;;
+        width: 1080px;
+        height: 225px;
         padding: 20px;
         display: flex;
         flex-direction: column;
@@ -345,7 +347,8 @@ html {
     .join-list{
         margin:  30px;
         padding: 20px;
-        height: 175px;
+        height: 125px;
+        width: 1080px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -363,7 +366,8 @@ html {
         
     }
     .history-list{
-        height: 1225px;
+        height: 1300px;
+        width: 1080px;
         margin: 20px;
         overflow: hidden;
         border-top: none;
@@ -375,6 +379,21 @@ html {
         border-bottom: 1px solid blueviolet;
         color:white;
         
+    }
+    .outreach-list{
+        width:  1080px;
+        height: 100x;
+         margin: 20px;
+        overflow: hidden;
+        border-top: none;
+        
+          -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+                  box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-bottom: 1px solid blueviolet;
+        color:white;
+         
     }
     
 }
@@ -445,7 +464,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 750px;
+        height: 275px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -460,7 +479,7 @@ html {
     .join-list{
         margin: 30px;;
         padding: 20px;
-        height: 375px;
+        height: px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -474,11 +493,11 @@ html {
     }
     .game-image{
         width:fit-content;
-        height:300px;
+        height:850px;
         
     }
     .history-list{
-        height: 1550px;
+        height: 1275px;
         margin: 20px;
         overflow: hidden;
         border-top: none;
@@ -527,7 +546,7 @@ html {
     .machine-list{
         margin: 30px;;
         padding: 20px;
-        height: 750px;
+        height: 350px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -542,7 +561,7 @@ html {
     .join-list{
         margin: 30px;;
         padding: 20px;
-        height: 375px;
+        height: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -556,11 +575,11 @@ html {
     }
     .game-image{
         width:fit-content;
-        height:300px;
+        height:550px;
         
     }
     .history-list{
-        height: 1550px;
+        height: 1100px;
         margin: 20px;
         overflow: hidden;
         border-top: none;
@@ -575,7 +594,7 @@ html {
     }
     .event-text{
         width:80%;
-        color: blueviolet;
+        color: orange;
 
     }
     .event-text p{
@@ -589,7 +608,7 @@ html {
 
     }
     .event-hero{
-        width: 80% ;
+        width: 100% ;
         margin: auto;
     }
     .event-image{
