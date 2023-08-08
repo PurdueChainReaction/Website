@@ -226,6 +226,7 @@ h3{
 }
 .outreach-list{
     margin: 10px;
+    padding: 10px;
     overflow: hidden;
     border-top: none;
     
@@ -342,70 +343,6 @@ html {
 /* ____________________________________________________________________*/
 /*MEDIA QUERIES*/
 
-/*Large Tablet screen*/
-/*
-@media screen and (max-width: 2560px) {
-    main{
-        width:100% !important;
-        margin: auto !important;
-    }
-    .machine-list{
-        width: 1080px;
-        height: 400px;
-    }
-    .join-list{
-        padding: 20px;
-        height: 125px;
-    }
-    .game-image{
-        width:fit-content;
-        height:900px;
-        
-    }
-    .history-list{
-        height: 1300px;
-        width: 1080px;
-        
-    }
-    .outreach-list{
-        width:  1080px;
-        height: 100x;
-         
-    }
-    
-}
-/*desktop*/
-/*
-@media screen and (max-width: 1920px) {
-    main{
-        width:100% !important;
-        margin: auto !important;
-    }
-    .machine-list{
-        width: 1080px;
-        height: 200px;
-    }
-    .join-list{
-        padding: 20px;
-        height: 125px;
-    }
-    .game-image{
-        width:fit-content;
-        height:900px;
-        
-    }
-    .history-list{
-        height: 1300px;
-        width: 1080px;
-        
-    }
-    .outreach-list{
-        width:  1080px;
-        height: 100x;
-         
-    }
-    
-}
 /*Large screens - Desktop*/
 @media screen and (max-width: 1500px) {
     .hero{
@@ -429,30 +366,6 @@ html {
     .hero-title{
         font-size:50px;
     }
-}
-/*Vertical screen*/
-/*
-@media screen and (max-width: 1080px) {
-    main{
-        width:100% !important;
-        margin: auto !important;
-    }
-    .machine-list{
-        padding: 20px;
-        height: 200px;
-    }
-    .join-list{
-        height: 150px;
-    }
-    .game-image{
-        width:fit-content;
-        height:900px;
-        
-    }
-    .history-list{
-        height: 1275px;  
-    }
-    
 }
 
 /*medium screens - Laptops*/
@@ -490,9 +403,6 @@ html {
 
 /*Small screens - tablets*/
 @media screen and (max-width: 768px) {
-    .heeder-large-screen{
-        display:block !important;
-    }
     header a{
         font-size: 14px;
     }
@@ -532,9 +442,6 @@ html {
 
 /*Extra small screens - phones*/
 @media screen and (max-width: 480px) {
-    .heeder-large-screen{
-        display:block !important;
-    }
     .hero{
         height: 600px !important;
         /*background-image: url("TeamPhoto.JPG");*/
@@ -566,9 +473,6 @@ html {
 
 /*extra Small screens - fold phones*/
 @media screen and (max-width: 390px) {
-    .heeder-large-screen{
-        display:block !important;
-    }
     header a{
         font-size: 14px;
     }
