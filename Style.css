@@ -94,7 +94,9 @@ main{
     color:white;
     font-weight: 600;
     font-size: 40px;;
-    margin:50px 0px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    /*margin:50px 0px;*/
     text-align: center;
     text-transform: uppercase;
     
@@ -119,7 +121,8 @@ h3{
     justify-content: space-evenly;
 }
 .sponsor-list{
-    margin: 30px;;
+    margin-top: 20px;
+    margin-bottom: 50px;
     padding: 20px;
     height: 200px;
     width:250px;
@@ -151,9 +154,9 @@ h3{
     justify-content: space-evenly;
 }
 .machine-list{
-    margin: 30px;;
-    padding: 20px;
-    height: 250px;
+    margin: 10px;;
+    padding: 10px;
+    height: 150px;
     width:  1200px;
     display: flex;
     flex-direction: column;
@@ -176,10 +179,10 @@ h3{
     justify-content: space-evenly;
 }
 .join-list{
-    margin: 30px;;
-    padding: 20px;
+    margin: 10px;;
+    padding: 50px;
     height: 125px;
-    width:  1200px;
+    width:  1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -192,7 +195,7 @@ h3{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .store{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 .history{
     margin-top: 20px !important;
@@ -213,7 +216,7 @@ h3{
 .history-list{
     width:  1200px;
     height: 900px;
-     margin: 20px;
+    margin: 10px;
     overflow: hidden;
     border-top: none;
     
@@ -226,7 +229,7 @@ h3{
      
 }
 .outreach{
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -255,7 +258,7 @@ flex-direction: column;
 } 
 h4{
     color:white;
-    font-weight: 700;
+    /*font-weight: 300;*/
 }
 .event-hero{
     display: flex;
@@ -263,8 +266,8 @@ h4{
     background: rgba(255, 75, 255, 0.1);
     justify-content: space-evenly;
     align-items: center;
-    padding:50px;
-    margin-top: 50px;
+    padding:10px;
+    margin-top: 10px;
     border:1px solid black;
     border-radius: 10px;
     
@@ -310,6 +313,7 @@ h5{
 }
 span{
     padding-right: 10px;
+    font-size:smaller;
 }
 .contact-list p{
 }
@@ -348,6 +352,69 @@ html {
 
 /* ____________________________________________________________________*/
 /*MEDIA QUERIES*/
+
+/*Large Tablet screen*/
+@media screen and (max-width: 2560px) {
+    main{
+        width:100% !important;
+        margin: auto !important;
+    }
+    .machine-list{
+        width: 1080px;
+        height: 400px;
+    }
+    .join-list{
+        padding: 20px;
+        height: 125px;
+    }
+    .game-image{
+        width:fit-content;
+        height:900px;
+        
+    }
+    .history-list{
+        height: 1300px;
+        width: 1080px;
+        
+    }
+    .outreach-list{
+        width:  1080px;
+        height: 100x;
+         
+    }
+    
+}
+/*desktop*/
+@media screen and (max-width: 1920px) {
+    main{
+        width:100% !important;
+        margin: auto !important;
+    }
+    .machine-list{
+        width: 1080px;
+        height: 200px;
+    }
+    .join-list{
+        padding: 20px;
+        height: 125px;
+    }
+    .game-image{
+        width:fit-content;
+        height:900px;
+        
+    }
+    .history-list{
+        height: 1300px;
+        width: 1080px;
+        
+    }
+    .outreach-list{
+        width:  1080px;
+        height: 100x;
+         
+    }
+    
+}
 /*Large screens - Desktop*/
 @media screen and (max-width: 1500px) {
     .hero{
@@ -372,81 +439,6 @@ html {
         font-size:50px;
     }
 }
-/*Large Tablet screen*/
-@media screen and (max-width: 2560px) {
-    main{
-        width:100% !important;
-        margin: auto !important;
-    }
-    .machine-list{
-        margin: 30px;;
-        width: 1080px;
-        height: 275px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-    }
-    .join-list{
-        margin:  30px;
-        padding: 20px;
-        height: 150px;
-        width: 1080px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-    }
-    .game-image{
-        width:fit-content;
-        height:900px;
-        
-    }
-    .history-list{
-        height: 1300px;
-        width: 1080px;
-        margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-        -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-        
-    }
-    .outreach-list{
-        width:  1080px;
-        height: 100x;
-         margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-          -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                  box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-         
-    }
-    
-}
 /*Vertical screen*/
 @media screen and (max-width: 1080px) {
     main{
@@ -454,34 +446,11 @@ html {
         margin: auto !important;
     }
     .machine-list{
-        margin: 30px;;
         padding: 20px;
-        height: 280px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 200px;
     }
     .join-list{
-        margin: 30px;;
-        padding: 20px;
-        height: 175px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 150px;
     }
     .game-image{
         width:fit-content;
@@ -489,18 +458,7 @@ html {
         
     }
     .history-list{
-        height: 1300px;
-        margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-        -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-        
+        height: 1275px;  
     }
     
 }
@@ -512,34 +470,7 @@ html {
         margin: auto !important;
     }
     .machine-list{
-        margin: 30px;;
-        padding: 20px;
         height: 325px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
-    }
-    .join-list{
-        margin: 30px;;
-        padding: 20px;
-        height: px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .game-image{
         width:fit-content;
@@ -547,18 +478,7 @@ html {
         
     }
     .history-list{
-        height: 1300px;
-        margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-        -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-        
+        height: 1300px;    
     }
     
 }
@@ -605,34 +525,10 @@ html {
         font-size: 30px;
     }
     .machine-list{
-        margin: 30px;;
-        padding: 20px;
-        height: 375px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 275px;
     }
     .join-list{
-        margin: 30px;;
-        padding: 20px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 150px;
     }
     .game-image{
         width:fit-content;
@@ -640,18 +536,7 @@ html {
         
     }
     .history-list{
-        height: 1100px;
-        margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-        -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-        
+        height: 1100px;       
     }
     .event-text{
         width:80%;
@@ -719,8 +604,6 @@ html {
       }
     .hero-description{
         height: 600px;
-        background-color: rgba(0, 0, 21, .7);
-    
     }
     .hero-title{
         font-size: 30px;;
@@ -735,34 +618,10 @@ html {
         font-size: 25px;
     }
     .machine-list{
-        margin: 30px;;
-        padding: 20px;
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 475px;
     }
     .join-list{
-        margin: 30px;;
-        padding: 20px;
-        height: 375px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border:1px solid gray;
-        background: rgba(255, 75, 255, 0.1);
-        box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        height: 250px;
     }
     .game-image{
         width:fit-content;
@@ -770,18 +629,7 @@ html {
         
     }
     .history-list{
-        height: 1550px;
-        margin: 20px;
-        overflow: hidden;
-        border-top: none;
-        
-        -webkit-box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-                box-shadow: 0 8px 40px 0 rgba(45, 57, 231, 0.37);
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-bottom: 1px solid blueviolet;
-        color:white;
-        
+        height: 1400px;
     }
     .event-text{
         width:100%;
@@ -813,9 +661,6 @@ html {
     }
     .contact-list{
         width: 300px;
-        padding:25px;
-        border:1px solid rgba(49, 45, 45, 0.5);
-        border-radius: 10px;
     }
     .contact-list p{
         font-size: 12px ;
