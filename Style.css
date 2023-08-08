@@ -147,7 +147,6 @@ h3{
 
 .machine{
     display: flex;
-    
     flex-wrap: wrap;
     align-items: center;
     /* background-color:	rgba(0, 0, 47,0.3); */
@@ -156,7 +155,6 @@ h3{
 .machine-list{
     margin: 10px;;
     padding: 10px;
-    height: 150px;
     width:  1200px;
     display: flex;
     flex-direction: column;
@@ -180,9 +178,7 @@ h3{
 }
 .join-list{
     margin: 10px;;
-    padding: 50px;
-    height: 125px;
-    width:  1100px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,8 +200,7 @@ h3{
     flex-wrap: wrap;
 }
 .game-image{
-    width:1200px;
-    height:450px;
+    width:100%;
     
 }
 .game-image img{
@@ -215,7 +210,6 @@ h3{
 }
 .history-list{
     width:  1200px;
-    height: 900px;
     margin: 10px;
     overflow: hidden;
     border-top: none;
@@ -229,15 +223,14 @@ h3{
      
 }
 .outreach{
-    margin-top: 10px !important;
+    margin-top: 20px !important;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .outreach-list{
     width:  1200px;
-    height: 100x;
-     margin: 20px;
+    margin: 10px;
     overflow: hidden;
     border-top: none;
     
@@ -251,9 +244,9 @@ h3{
 }
 .store-text-description{
      
-padding-left:20px;
-display: flex;
-flex-direction: column;
+    padding-left:20px;
+    display: flex;
+    flex-direction: column;
      
 } 
 h4{
@@ -354,6 +347,7 @@ html {
 /*MEDIA QUERIES*/
 
 /*Large Tablet screen*/
+/*
 @media screen and (max-width: 2560px) {
     main{
         width:100% !important;
@@ -385,6 +379,7 @@ html {
     
 }
 /*desktop*/
+/*
 @media screen and (max-width: 1920px) {
     main{
         width:100% !important;
@@ -418,12 +413,12 @@ html {
 /*Large screens - Desktop*/
 @media screen and (max-width: 1500px) {
     .hero{
-        height: 550px !important;;
+        height: 700px !important;;
         /*background-image: url("TeamPhoto.JPG")*/;
     }
     #background-video {
-        width: 100vw;
-        height: 550px;
+        width: 100%;
+        height: 70%;
         object-fit: cover;
         position:absolute;
         left: 0;
@@ -433,13 +428,14 @@ html {
         z-index: -1;
       }
     .hero-description{
-        height: 550px
+        height: 100%;
     }
     .hero-title{
         font-size:50px;
     }
 }
 /*Vertical screen*/
+/*
 @media screen and (max-width: 1080px) {
     main{
         width:100% !important;
@@ -466,21 +462,30 @@ html {
 /*medium screens - Laptops*/
 @media screen and (max-width: 1024px) {
     main{
-        width:100% !important;
+        width:90% !important;
         margin: auto !important;
     }
-    .machine-list{
-        height: 325px;
+    .hero{
+        height: 900px !important;;
+        /*background-image: url("TeamPhoto.JPG")*/;
     }
-    .game-image{
-        width:fit-content;
-        height:850px;
-        
+    #background-video {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        position:absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    .hero-description{
+        height: 100%;
     }
-    .history-list{
-        height: 1300px;    
+    .hero-title{
+        font-size:50px;
     }
-    
 }
 
 /*Small screens - tablets*/
@@ -492,12 +497,12 @@ html {
         font-size: 14px;
     }
     .hero{
-        height: 400px !important;
+        height: 500px !important;
         /*background-image: url("TeamPhoto.JPG");*/
     }
     #background-video {
-        width: 100vw;
-        height: 400px;
+        width: 100%;
+        height: 53%;
         object-fit: cover;
         position:absolute;
         left: 0;
@@ -507,77 +512,22 @@ html {
         z-index: -1;
       }
     .hero-description{
-        height: 400px;
+        width: 100%;
         background-color: rgba(0, 0, 21, .7);
         
     
     }
     .hero-title{
-        font-size: 35px;;
-        
+        font-size: 30px;;
+        padding-top: 30px;
     }
     .hero-text p{
-        width: 80%;;
+        width: 100%;;
         font-size: 13px;
     }
     .title{
         text-align: center;
-        font-size: 30px;
-    }
-    .machine-list{
-        height: 275px;
-    }
-    .join-list{
-        height: 150px;
-    }
-    .game-image{
-        width:fit-content;
-        height:550px;
-        
-    }
-    .history-list{
-        height: 1100px;       
-    }
-    .event-text{
-        width:80%;
-        color: orange;
-
-    }
-    .event-text p{
-        font-size: 13px;
-    }
-    .event-title{
-        font-size: 30px;
-        text-transform: uppercase;
-        font-weight: 600;
-    
-
-    }
-    .event-hero{
-        width: 100% ;
-        margin: auto;
-    }
-    .event-image{
-        width:250px;
-        height: 400px;
-    }
-    .event-image img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .contact-list{
-        width: 300px;
-    }
-    .contact{
-        justify-content: space-around;
-    }
-    .contact-list p{
-        font-size: 14px ;
-
-    }
-    h5{
-        font-size: 17px;
+        font-size: 25px;
     }
     
 }
@@ -603,11 +553,11 @@ html {
         z-index: -1;
       }
     .hero-description{
-        height: 600px;
+        height: 100%;
     }
     .hero-title{
-        font-size: 30px;;
-        padding-top: 70px;
+        font-size: 40px;;
+        padding-top: 20px;
     }
     .hero-text p{
         width: 100%;;
@@ -616,20 +566,6 @@ html {
     .title{
         text-align: center;
         font-size: 25px;
-    }
-    .machine-list{
-        height: 475px;
-    }
-    .join-list{
-        height: 250px;
-    }
-    .game-image{
-        width:fit-content;
-        height:300px;
-        
-    }
-    .history-list{
-        height: 1400px;
     }
     .event-text{
         width:100%;
@@ -649,10 +585,6 @@ html {
     .event-hero{
         width: 90% ;
         margin: auto;
-    }
-    .event-image{
-        width:250px;
-        height: 400px;
     }
     .event-image img{
         width: 100%;
