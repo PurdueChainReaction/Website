@@ -3,4 +3,4 @@
 So you want to change my website
 
 # How to get started
-I would recommend you download [Git](https://git-scm.com/download/win) and [Visual Code Studio](https://code.visualstudio.com/download)
+Firstly if you haven't already, make a github account. Then using the PurdueChainReaction login, add your github account to the repository. I would recommend you download [Git](https://git-scm.com/download/win) and [Visual Code Studio](https://code.visualstudio.com/download). Git will allow you to download, edit and reupload to this repository and visual code studio is a good place to edit the code.
