@@ -3,4 +3,4 @@
 So you want to change my website
 
 #How to get started
-I would recommend you download ![Git](https://git-scm.com/download/win)
+I would recommend you download [Git](https://git-scm.com/download/win)
