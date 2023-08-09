@@ -97,7 +97,7 @@
      /* padding-top:80px; */
      font-weight: 800;
     text-transform: uppercase;
-    font-size: 80px;
+    font-size: 70px;
     color:var(--highlightedText);
     text-shadow:
     -1px -1px 0 #000,
@@ -301,8 +301,6 @@ span{
     padding-right: 10px;
     font-size:smaller;
 }
-.contact-list p{
-}
 .email-contact{
     width:80%;
     color: gray;
@@ -340,7 +338,7 @@ html {
 /*MEDIA QUERIES*/
 
 /*Large screens - Desktop*/
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1650px) {
     .hero{
         height: 700px !important;;
         /*background-image: url("TeamPhoto.JPG")*/;
@@ -365,7 +363,7 @@ html {
 }
 
 /*medium screens - Laptops*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     main{
         width:90% !important;
         margin: auto !important;
@@ -389,7 +387,7 @@ html {
         height: 100%;
     }
     .hero-title{
-        font-size:50px;
+        font-size:75px;
     }
     main{
         width:90% !important;
@@ -424,7 +422,7 @@ html {
         width: 100%;
     }
     .hero-title{
-        font-size: 30px;;
+        font-size: 50px;;
         padding-top: 10px;
     }
     .hero-text p{
@@ -437,7 +435,7 @@ html {
 }
 
 /*Extra small screens - phones*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
     .heeder-large-screen{
         display:block !important;
     }
@@ -460,7 +458,7 @@ html {
         height: 100%;
     }
     .hero-title{
-        font-size: 30px;;
+        font-size: 40px;;
         padding-top: 20px;
     }
     .hero-text p{
