@@ -25,10 +25,10 @@
 
 }
 
-/*
-@font-face { font-family: "condensedBlack"; src: url('Helvetica\ Neue\ Blk\ Cn.otf'); } 
-@font-face { font-family: "condensedBold"; src: url('Helvetica\ Neue\ Bd\ Cn.otf'); } 
-*/
+
+@font-face { font-family: "header"; src: url('Muro.otf'); } 
+@font-face { font-family: "text"; src: url('Gogh-ExtraBold.otf'); } 
+
 #background-video {
     width: 100vw;
     height: 900px;
@@ -75,12 +75,11 @@
     display: flex;
 }
 .hero-text{
-    width: 85% !important;
+    width: 70% !important;
     margin: auto !important;
     display: flex;
     flex-wrap: wrap;
-    font-family: "condensedBlack";
-    
+    font-family: "text";
 }
 
 
@@ -92,10 +91,11 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
+    font-family: "text";
 }
 .hero-title{
      /* padding-top:80px; */
-     font-weight: 800;
+     font-weight: 500;
     text-transform: uppercase;
     font-size: 70px;
     color:var(--highlightedText);
@@ -105,6 +105,7 @@
     -1px 1px 0 #000,
     1px 1px 0 #000; 
     text-align: center;
+    font-family: "header";
 
 }
 .social{
@@ -119,10 +120,12 @@ main{
     width:80% !important;
     margin: auto !important;
     align-items: center;
+    font-family: "text";
 }
 .title{
     margin-inline:auto;
     color: var(--title);
+    font-family: "header";
     /*
     text-shadow:
     -1px -1px 0 #ffb500,
@@ -136,7 +139,7 @@ main{
     border-top-right-radius:20px;
     background-color: var(--highlightedText);
     */
-    font-weight: 600;
+    font-weight: 500;
     font-size: 40px;
     margin-bottom: 10px;
     margin-top: 90px;
@@ -178,6 +181,7 @@ h3{
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 4px solid var(--border);
+    font-family: "text";
 }
 .sponsor-list:hover{
     transform: scale(1.05);
@@ -205,6 +209,7 @@ h3{
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
+    font-family: "text";
 }
 .store{
     margin-top: 20px;
@@ -233,6 +238,7 @@ h3{
     -webkit-backdrop-filter: blur( 4px );
     border-bottom: 1px solid var(--mainBox);
     color: var(--text);
+    font-family: "text";
      
 }
 .store-text-description{
@@ -240,6 +246,7 @@ h3{
     padding-left:20px;
     display: flex;
     flex-direction: column;
+    font-family: "text";
      
 } 
 h4{
@@ -256,6 +263,7 @@ h4{
     padding:10px;
     margin-top: 10px;
     border-radius: 10px;
+    font-family: "text";
     
 }
 .event-text{
@@ -266,8 +274,8 @@ h4{
 .event-title{
     font-size: 40px;
     text-transform: uppercase;
-
-    font-weight: 600;
+    font-family: "header";
+    font-weight: 500;
     
 
 }
@@ -293,6 +301,7 @@ h4{
 .contact-list{
     margin-top: 15px !important;
     color: var(--text);
+    font-family: "text";
 }
 h5{
     color:var(--text);
