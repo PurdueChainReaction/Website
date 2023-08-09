@@ -3,9 +3,9 @@
     /*COLORS*/
     background-color: black;
     --background: black;
-    --announcementBox: #00478f;
+    --announcementBox: grey;
     --mainBox: #ffc02a;
-    --mainBoxHighlight: #c8bb04;
+    --mainBoxHighlight: grey;
     --highlightedText: #ffc02a;
     --sponsorHighlight: grey;
     --grey: #ced4da;
