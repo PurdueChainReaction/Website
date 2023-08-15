@@ -73,12 +73,11 @@
 .hero-description{
     height: 900px;
     background-color: var(--videoCover);
-    display:flex;
+    display: flex;
 }
 .hero-text{
     width: 70% !important;
     margin: auto !important;
-    display: flex;
     flex-wrap: wrap;
     font-family: "text";
 }
@@ -105,7 +104,7 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000; 
-    text-align: center;
+    text-align: left;
     font-family: "header";
 
 }
@@ -431,7 +430,6 @@ html {
         z-index: -1;
       }
     .hero-description{
-        display:block;
         width: 100%;
     }
     .hero-title{
