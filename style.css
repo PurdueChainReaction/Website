@@ -17,7 +17,6 @@
     --text: white;
     --border: grey;
     --videoCover: #00000081;
-    --fontText: "text";
 }
 
 /*Extra Large screens - Extra large desktops*/
@@ -27,8 +26,8 @@
 }
 
 
-@font-face { font-family: "header"; src: url('fonts/BarlowCondensed-ExtraBold.ttf'); } 
-@font-face { font-family: "text"; src: url('fonts/RobotoCondensed-Regular.ttf'); } 
+@font-face { font-family: "header"; src: url('Fonts/BarlowCondensed-ExtraBold.ttf'); } 
+@font-face { font-family: "text"; src: url('Fonts/RobotoCondensed-Regular.ttf'); } 
 
 #background-video {
     width: 100vw;
