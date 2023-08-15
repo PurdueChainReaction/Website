@@ -158,6 +158,7 @@ main{
 h3{
     color:var(--text);
     text-align: center;
+    font-family: "text";
 }
 
 .sponsor{
@@ -189,6 +190,7 @@ h3{
 h3{
     color:var(--text);
     text-align: center;
+    font-family: "text";
 }
 .announcement{
     display: flex;
@@ -251,6 +253,7 @@ h3{
 } 
 h4{
     color:var(--text);
+    font-family: "text";
     /*font-weight: 300;*/
 }
 .event-hero{
