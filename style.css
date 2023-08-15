@@ -26,8 +26,8 @@
 }
 
 
-@font-face { font-family: "header"; src: url('Muro.otf'); } 
-@font-face { font-family: "text"; src: url('Gogh-ExtraBold.otf'); } 
+@font-face { font-family: "header"; src: url('fonts/Muro.otf'); } 
+@font-face { font-family: "text"; src: url('fonts/Gogh-ExtraBold.otf'); } 
 
 #background-video {
     width: 100vw;
