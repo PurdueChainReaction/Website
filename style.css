@@ -41,6 +41,17 @@
     z-index: -1;
   }
 
+#video {
+    width: 90vw;
+    height: 50vw;
+    object-fit: cover;
+    position:relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 .heeder-large-screen{
     display: flex !important;
     justify-content: space-evenly !important;
@@ -143,7 +154,7 @@ main{
     margin-bottom: 10px;
     margin-top: 90px;
     /*margin:50px 0px;*/
-    width:fit-content;
+    /*width:fit-content;*/
     text-align: center;
     text-transform: uppercase;
     
