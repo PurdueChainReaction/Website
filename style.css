@@ -57,8 +57,9 @@
     justify-content: space-evenly !important;
     color: var(--highlightedText);
     font-size: 18px !important;
-
-
+    position: fixed;
+    z-index:1;
+    top:0;
 }
 
 .heeder-large-screen-secondary{
@@ -66,8 +67,9 @@
     justify-content: space-evenly !important;
     color: var(--highlightedText);
     font-size: 18px !important;
-
-
+    position:fixed;
+    z-index:1;
+    top:0;
 }
 
 #navDemo{
@@ -76,11 +78,12 @@
     display: block;
     overflow: hidden;
     display: none;
-    position: absolute;
+    position: fixed;
     width: 100%;
+    top: 40px;
 }
 #navDemo a{
-    font-size: 18px !important;
+    font-size: px !important;
     color: var(--navBarText);
 }
 
