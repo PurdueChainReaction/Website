@@ -60,6 +60,16 @@
 
 
 }
+
+.heeder-large-screen-secondary{
+    display: block !important;
+    justify-content: space-evenly !important;
+    color: var(--highlightedText);
+    font-size: 18px !important;
+
+
+}
+
 #navDemo{
     background-color: var(--navBar);
     z-index: 1;
