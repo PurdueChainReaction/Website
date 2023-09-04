@@ -62,7 +62,12 @@
 }
 #navDemo{
     background-color: var(--navBar);
-    
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    width: 100%;
 }
 #navDemo a{
     font-size: 13px !important;

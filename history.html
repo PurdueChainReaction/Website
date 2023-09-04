@@ -16,19 +16,28 @@
 <body>
   <header style="position: relative;">
 
-    <div class="w3-top" class="header" id="home">
-      <div class="w3-bar w3-large heeder-large-screen" style="background-color: var(--background)" >
-        <div >
-          <a href="./" class="w3-bar-item w3-button w3-padding-large w3-hover-black" >Back To Main Page</a>
-        </div>
+    <div class="w3-top; header" id="home">
+      <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: var(--navBar);font-family:'text'" >
+        <a href="./" class="w3-bar-item w3-button w3-padding-large w3-hover-black" >Back To Main Page</a>
+        <a class="w3-bar-item w3-button  w3-right w3-padding-large w3-hover-black w3-large " style="color:var(--navBarText);" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-hide w3-large" style="color:var(--navBarText); font-family:'text'">
+        <a href="#2023" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2023</a>
+        <a href="#2019" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2019</a>
+        <a href="#2018" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2018</a>
+        <a href="#2017" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2017</a>
+        <a href="#2016" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2016</a>
+        <a href="#2015" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()" style="color:var(--navBarText); text-align:center">2015</a>
       </div>
     </div>
   </header>
   <main style="padding-bottom:40px ;">
     <h2 class="title" style="border-bottom: 1px solid var(--mainBox);">Past Machines</h2>
     
-    <div class="boxed">    
+    <div class="boxed" id="2023">    
         
         <div class="boxed-list">
           <div class="store-text-description">
@@ -41,7 +50,7 @@
         </div>
       </div>
     
-    <div class="boxed">    
+    <div class="boxed" id="2019">    
         
         <div class="boxed-list">
           <div class="store-text-description">
@@ -54,7 +63,7 @@
         </div>
       </div>
 
-      <div class="boxed">    
+      <div class="boxed" id="2018">    
         
         <div class="boxed-list">
           <div class="store-text-description">
@@ -66,6 +75,56 @@
           </div>
         </div>
       </div>
+
+      <div class="boxed" id="2017">    
+        
+        <div class="boxed-list">
+          <div class="store-text-description">
+            <h2 class="title">2017</h2>
+            <iframe id="iframeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/kPTZ2sEKHWo" 
+            title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h4>Final Step: Apply a Baind-Aid<br>Theme: Apply a Baind-Aid to a Broken Heart<br>Step Count: 72<br>Result: 2nd Place in National Competition</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxed" id="2016">    
+        
+        <div class="boxed-list">
+          <div class="store-text-description">
+            <h2 class="title">2016</h2>
+            <iframe id="iframeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/BtDGDTUDO-8" 
+            title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h4>Final Step: Open an Umbrella<br>Theme: A walk Down Main Street<br>Step Count: 74<br>Result: 2nd Place in Regional and National Competition</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="boxed" id="2015">    
+        
+        <div class="boxed-list">
+          <div class="store-text-description">
+            <h2 class="title">2015</h2>
+            <iframe id="iframeVideo" width="100%" height="100%" src="https://www.youtube.com/embed/MwJ1D4gD4Nw" 
+            title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h4>Final Step: Erase a Chalkboard<br>Theme: A Day in the life of Rube<br>Step Count: 73<br>Result: 1st Place in Regional and National Competition</h4>
+          </div>
+        </div>
+      </div>
   </main>
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
 </body>
 </html>
