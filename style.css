@@ -344,12 +344,54 @@ span{
     flex-direction: column;
     justify-content: space-evenly;
 }
+.mainTeam{
+    width:90% !important;
+    margin: auto !important;
+    font-family: "text";
+}
 
+.team{
+    width: 100%;
+    display:grid;
+    grid-template-areas:
+        'photo main main main main main main main main main main main main main main main main main main';
+    /* this amount of mains is actually necessary */
+    gap: 10px;
+    background: var(--announcementBox);
+    padding:10px;
+    margin-top: 10px;
+    border-radius: 100px;
+}
+.team-member-text{
+    grid-area: main;
+    padding: 10px;
+    width: 95%;
+    font-family: "text";
+    text-align: left;
+    border-radius: 20px;
+    background-color:black;
+}
 
+.team-member-text p{
+    color: var(--text);
+    font-family: "text";
+    font-size: 20px;
+}
 
+.team-member-text-img{
+    grid-area: photo; 
+}
 
+.team-member-text-img img{
+    border-radius: 100px;
+    height: 100%;
+}
 
-
+.role{
+    text-align:left; 
+    margin-top:0px;
+    font-size: 40px;
+}
 /*General CSS and CSS reset*/
 
 html {
