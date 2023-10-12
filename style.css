@@ -1,20 +1,20 @@
 /*CSS variables section*/
 :root {
     /*COLORS*/
-    background-color: black;
-    --background: black;
+    background-color: #101010;
+    --background: #1f1f1f;
     --announcementBox: grey;
     --mainBox: #ffc02a;
     --mainBoxHighlight: grey;
     --highlightedText: #ffc02a;
     --sponsorHighlight: grey;
     --grey: #ced4da;
-    --navBar: black;
+    --navBar: #101010;
     --navBarText: #ffc02a;
     /*--navBar: #ffc02a;
     --navBarText: white;*/
-    --title: white;
-    --text: white;
+    --title: #fff7f0;
+    --text: #fff7f0;
     --border: grey;
     --videoCover: #00000081;
 }
@@ -354,22 +354,25 @@ span{
     width: 100%;
     display:grid;
     grid-template-areas:
-        'photo main main main main main main main main main main main main main main main main main main';
+        'photo main main main main main main main main main main main main main main main main';
     /* this amount of mains is actually necessary */
     gap: 10px;
     background: var(--announcementBox);
     padding:10px;
-    margin-top: 10px;
+    margin-top: 30px;
     border-radius: 100px;
+
 }
 .team-member-text{
     grid-area: main;
-    padding: 10px;
-    width: 95%;
+    padding-right: 10px;
+    padding-bottom:20px;
+    width: 100%;
     font-family: "text";
     text-align: left;
-    border-radius: 20px;
-    background-color:black;
+    border-radius: 100px;
+    background-color:var(--background);
+    padding-left:100px;
 }
 
 .team-member-text p{
@@ -384,7 +387,7 @@ span{
 
 .team-member-text-img img{
     border-radius: 100px;
-    height: 100%;
+    height: 400px;
 }
 
 .role{
@@ -403,7 +406,19 @@ html {
   padding: 0;
 }
 
+.text-rainbow-animation {
+    background-image: 
+      linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+    -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;  
+    animation: rainbow-animation 100s linear infinite;
+  }
 
+@keyframes rainbow-animation {
+    to {
+        background-position: 4500vh;
+    }
+}
 
 
 
