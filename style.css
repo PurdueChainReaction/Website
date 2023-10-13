@@ -407,7 +407,18 @@ span{
     margin-top:15px;
 }
 
+.people{
+    width:250px; 
+    height:125px;
+}
 
+.people img{
+    height:300px;
+}
+
+.people-list{
+    padding-bottom: 200px;
+}
 /*General CSS and CSS reset*/
 
 html {
@@ -505,6 +516,10 @@ html {
     .team-member-text{
         padding-left:65px;
     }
+    .people{
+        width: 200px;
+    }
+    
 }
 
 /*Small screens - tablets*/
@@ -556,6 +571,15 @@ html {
     .name{
         margin-top: 5px;
     }
+    .people{
+        width: 150px;
+    }
+    .people img{
+        height:200px;
+    }
+    .people-list{
+        padding-bottom: 100px;
+    }
 }
 
 /*Extra small screens - phones*/
@@ -594,6 +618,15 @@ html {
     .team-member-text p{
         font-size:15px;
         padding-right:8px;
+    }
+    .people{
+        width: 100px;
+    }
+    .people img{
+        height:150px;
+    }
+    .people-list{
+        padding-bottom: 50px;
     }
 }
 
