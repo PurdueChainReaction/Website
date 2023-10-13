@@ -358,7 +358,7 @@ span{
     /* this amount of mains is actually necessary */
     gap: 10px;
     background: var(--announcementBox);
-    padding:10px;
+    padding: 10px;
     margin-top: 30px;
     border-radius: 100px;
 
@@ -486,6 +486,12 @@ html {
         font-size:50px;
         text-align:center;
     }
+    .team-member-text p{
+        font-size:18px;
+    }
+    .team-member-text{
+        padding-left:65px;
+    }
 }
 
 /*Small screens - tablets*/
@@ -525,6 +531,14 @@ html {
     main{
         width:100% !important;
     }
+    .team{
+        grid-template-areas:
+        'photo'
+        'main';
+    }
+    .team-member-text{
+        padding-left:45px;
+    }
 }
 
 /*Extra small screens - phones*/
@@ -557,7 +571,9 @@ html {
         width: 100%;;
         font-size: 13px;
     }
-    
+    .team{
+        justify-items:center;
+    }
 }
 
 /*extra Small screens - fold phones*/
