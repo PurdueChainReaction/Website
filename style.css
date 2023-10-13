@@ -373,12 +373,14 @@ span{
     border-radius: 100px;
     background-color:var(--background);
     padding-left:100px;
+    padding-right:35px;
 }
 
 .team-member-text p{
     color: var(--text);
     font-family: "text";
     font-size: 20px;
+    
 }
 
 .team-member-text-img{
