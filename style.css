@@ -395,6 +395,13 @@ span{
     margin-top:0px;
     font-size: 40px;
 }
+
+.name{
+    text-align:left !important;
+    margin-top:30px;
+}
+
+
 /*General CSS and CSS reset*/
 
 html {
@@ -537,7 +544,11 @@ html {
         'main';
     }
     .team-member-text{
-        padding-left:45px;
+        padding-left:50px;
+        padding-right:35px;
+    }
+    .name{
+        margin-top: 5px;
     }
 }
 
@@ -573,6 +584,10 @@ html {
     }
     .team{
         justify-items:center;
+    }
+    .team-member-text p{
+        font-size:15px;
+        padding-right:8px;
     }
 }
 
