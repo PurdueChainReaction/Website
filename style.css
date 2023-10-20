@@ -273,8 +273,6 @@ h3{
      
 }
 .store-text-description{
-    display: flex;
-    flex-direction: column;
     font-family: "text";
      
 } 
@@ -419,6 +417,32 @@ span{
 .people-list{
     padding-bottom: 200px;
 }
+
+.buttonOnBackground{
+    -webkit-filter: brightness(100%);
+}
+
+.buttonOnBackground:hover {
+    -webkit-filter: brightness(70%);
+    transform: scale(.95);
+}
+
+table{
+    font-family: "text";
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid var(--text);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--sponsorHighlight);
+}
+
 /*General CSS and CSS reset*/
 
 html {
