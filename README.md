@@ -7,7 +7,8 @@ Firstly if you haven't already, make a github account. Then using the PurdueChai
 
 # Setting up Visual Code
 ## Extensions
-After Git and Visual Code are downloaded, there are some extensions we need to get first so its easy to edit the website. To download extensions in visual code, just click on the icon of 4 boxes on the left hand side. I recommend downloading the *GitHub Pull Requests and Issues* extension and the *Live Server* extension. The git extension makes pull requests(downloading the changed files) and push requests(uploading the files) easy to do. It also makes seeing what was changed between push requests.
+After Git and Visual Studio Code are downloaded, there are some extensions we need to get first so its easy to edit the website. To download extensions in Visual Studio Code, just click on the icon of 4 boxes on the left hand side. I recommend downloading the *GitHub Pull Requests and Issues* extension and the *Live Server* extension. The git extension makes pull requests(downloading the changed files) and push requests(uploading the files) easy to do. It also makes seeing what was changed between push requests.
+
 ![Extensions](https://github.com/PurdueChainReaction/Website/assets/58526449/a0b3dea8-c7a4-432c-aefa-b1c2ba980b2f)
 | Live Server                                                                                                         | GitHub Pull Requests and Issues                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -15,6 +16,8 @@ After Git and Visual Code are downloaded, there are some extensions we need to g
 
 
 ## Logging Into Git
+To login to git through Visual Studio Code so you can update the repository, first you click on the person icon located on the left bar at the bottom. Next click on *Sign in with GitHub to use GitHub Pull Requests and Issues*. It will redirect you to the GitHub website, just login normally. Afterwards it will redirect you back to Visual Studio Code
+![Github Login](https://github.com/PurdueChainReaction/Website/assets/58526449/7128e6de-27ba-4740-aed3-351c9292418c)
 
 
 ## How to Pull Your Code
