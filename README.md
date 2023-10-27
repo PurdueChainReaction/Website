@@ -10,6 +10,7 @@ Firstly if you haven't already, make a github account. Then using the PurdueChai
 After Git and Visual Code are downloaded, there are some extensions we need to get first so its easy to edit the website. To download extensions in visual code, just click on the icon of 4 boxes on the left hand side. I recommend downloading the git extension and the live server extension. The git extension makes pull requests(downloading the changed files) and push requests(uploading the files) easy to do. It also makes seeing what was changed between push requests.
 
 ## Logging Into Git
+![Extensions](https://github.com/PurdueChainReaction/Website/assets/58526449/dad20f98-0005-4e86-a232-4453c7a869d8)
 
 ## How to Pull Your Code
 
