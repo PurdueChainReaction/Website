@@ -17,10 +17,32 @@ After Git and Visual Studio Code are downloaded, there are some extensions we ne
 
 ## Logging Into Git
 To login to git through Visual Studio Code so you can update the repository, first you click on the person icon located on the left bar at the bottom. Next click on *Sign in with GitHub to use GitHub Pull Requests and Issues*. It will redirect you to the GitHub website, just login normally. Afterwards it will redirect you back to Visual Studio Code.
+
 ![Github Login](https://github.com/PurdueChainReaction/Website/assets/58526449/7128e6de-27ba-4740-aed3-351c9292418c)
 
+## How to Pull Your Code For the First Time
+To pull the code, you will be creating a folder using a git command that you can then access to change the code and then upload to the repository. 
+To pull the code the first time, click on *Termainal* on the top bar, then *New Terminal*.
 
-## How to Pull Your Code
+![Terminal](https://github.com/PurdueChainReaction/Website/assets/58526449/90cb3845-3748-439d-a4c0-3e240af9cd2d)
 
+After you have open up the terminal, click on the dropdown arrow next to the plus, and then click on *Git Bash*.
+
+![Initial Pull](https://github.com/PurdueChainReaction/Website/assets/58526449/7df30051-09e3-4efb-b167-84be926b8dfb)
+
+In the terminal enter the command ```git pull https://github.com/PurdueChainReaction/Website```
+This will create a folder on your computer where the repository will be stored. You can only pull the folder if and only if you are a collaborator.
+
+After the intial pull, you can do pull commands if you have the folder open in explorer(This is explained in the next section). 
+To do this, click on *Source Control*, which is the icon of 3 circles with lines attaching them on the left bar. After that to pull the repository and update your folder, click on the 3 dots in the source control section, then *pull*.
+
+![Pull REquest](https://github.com/PurdueChainReaction/Website/assets/58526449/db74ac63-0a50-49a8-ada1-1225d5cd08e9)
+
+
+## How to Open Code Folder in Visual Code
+On the top bar select *File*, then *Open Folder*.
+
+![Open Folder](https://github.com/PurdueChainReaction/Website/assets/58526449/a88a9a49-d57e-49aa-a4ab-3dd66f70c9bd)
 
 ## How to Push Your Code
+
