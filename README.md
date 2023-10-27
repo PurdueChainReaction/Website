@@ -58,4 +58,7 @@ If you get an error after pushing and it mentions you need to do a pull first, j
 
 
 # Editing the website
-Don't
+[W3Schools HTML](https://www.w3schools.com/html/default.asp) and [W3Schools CSS](https://www.w3schools.com/css/default.asp) will be your best friend to learn more about the code of the website that is not explained here in this readme.
+
+As you go through the website you will notice a lot of text surrounded by a ```<!--``` and ```-->```. These create a comment block. A comment block is something that will not be put in the website but can be read in the code.
+There are multiple places in the code where you can remove said lines to allow for certain boxes to be put on the webiste like the announcement box.
