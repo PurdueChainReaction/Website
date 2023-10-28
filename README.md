@@ -69,6 +69,9 @@ A basic rundown of how html works:
 - ```<a href="link">###</a>``` This is how you add a link, it will appear inline in the website. Just replace *link* with your link and ### with the words that will display.
 - One thing you will see a lot is ```class="###"```, this links the block with code in the *stylesheet.css* page.
 - If you make a block in the website that will look different but you aren't going to use that style more than once, add ```style="###"``` in the same area you see ```class="###"```. This will add a custom style to just that block of code.
+- Any time you see ```id="***"``` it is a tag that can be navigated to in the navbar. You can link to it using ```href="#***"```. The *#* is the prefix to the word *id* is equal to.
+- When linking to pages on the website just put ```href="page"``` **DO NOT PUT** ```href="page.html"``` the *.html* is not required for the website and looks better if it is not part of it.
+- To run the live webserver, right-click on the html page in the explorer tab and click on *Open With Live Server*. This will open the page in a browser for you to check. The links will not work because the *.html* is not in there but when it is uploaded to the website it will work.
 - To learn more about how html works, go to [W3Schools HTML](https://www.w3schools.com/html/default.asp)
 
 A basic rundown of how css works:
