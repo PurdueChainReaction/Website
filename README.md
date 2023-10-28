@@ -3,7 +3,7 @@
 So you want to change my website
 
 # How to get started
-Firstly if you haven't already, make a github account. Then using the PurdueChainReaction login, add your github account to the repository. ![addingCollaborator](https://github.com/PurdueChainReaction/Website/assets/136839609/6f368dd6-3aed-4887-aaf3-ab34b57177c4) I would recommend you download [Git](https://git-scm.com/download/win) and [Visual Code Studio](https://code.visualstudio.com/download). Git will allow you to download, edit and reupload to this repository and visual code studio is a good place to edit the code.
+Firstly if you haven't already, make a github account. Then using the *PurdueChainReaction* login, add your github account to the repository. ![addingCollaborator](https://github.com/PurdueChainReaction/Website/assets/136839609/6f368dd6-3aed-4887-aaf3-ab34b57177c4) I would recommend you download [Git](https://git-scm.com/download/win) and [Visual Code Studio](https://code.visualstudio.com/download). Git will allow you to download, edit and reupload to this repository and visual code studio is a good place to edit the code.
 
 ## Setting up Visual Code
 ### Extensions
