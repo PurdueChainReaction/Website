@@ -49,7 +49,7 @@ To push after you have made changes, go back into source control and you should 
 
 ![Stage Changes](https://github.com/PurdueChainReaction/Website/assets/58526449/ff31288c-d7fc-46a9-a71b-fcadc19b15c5)
 
-After clicking the plus, it will move your file into a new section called *Staged Changes*. Once that has happend you ***MUST** put a message in the text box above or it will not push. Once you put a message in there, click on the drop down arrow and select *Commit & Push*.
+After clicking the plus, it will move your file into a new section called *Staged Changes*. Once that has happend you **MUST** put a message in the text box above or it will not push. Once you put a message in there, click on the drop down arrow and select *Commit & Push*.
 
 ![Commit & Push](https://github.com/PurdueChainReaction/Website/assets/58526449/a1b07394-c7b8-4042-9934-01263246b2ee)
 
@@ -62,6 +62,19 @@ If you get an error after pushing and it mentions you need to do a pull first, j
 
 As you go through the website you will notice a lot of text surrounded by a ```<!--``` and ```-->```. These create a comment block. A comment block is something that will not be put in the website but can be read in the code.
 There are multiple places in the code where you can remove said lines to allow for certain boxes to be put on the webiste like the announcement box.
+The code should have comments for what most blocks of code do. Please add comments if you add to the website code so that future webmasters can understand what is happening. No one wants to do it but we should. 
+
+A basic rundown of how html works:
+- Blocks of code will start with a ```<###>``` and end with ```</###>```. Everything within that block will get affected by what is written in them. the ### will be one word.
+- ```<a href="link">###</a>``` This is how you add a link, it will appear inline in the website. Just replace *link* with your link and ### with the words that will display.
+- One thing you will see a lot is ```class="###"```, this links the block with code in the *stylesheet.css* page.
+- If you make a block in the website that will look different but you aren't going to use that style more than once, add ```style="###"``` in the same area you see ```class="###"```. This will add a custom style to just that block of code.
+- To learn more about how html works, go to [W3Schools HTML](https://www.w3schools.com/html/default.asp)
+
+A basic rundown of how css works:
+- Blocks of code will start with ```.### {``` and end with ```}```. Within the brackets, each line ends with a ```;```.
+- Each line in the brackets is something that will change the asthetic of the final product.
+- To learn more about what each line does, go to [W3Schools CSS](https://www.w3schools.com/css/default.asp)
 
 # Uploading the Code to the Website
 1. Login to [Muffin Man Hosting](https://muffinmanhosting.com/account) and sign in with the club's gmail.
