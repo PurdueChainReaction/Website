@@ -79,6 +79,9 @@ A basic rundown of how css works:
 - Each line in the brackets is something that will change the asthetic of the final product.
 - To learn more about what each line does, go to [W3Schools CSS](https://www.w3schools.com/css/default.asp)
 
+## Replacing Images
+To replace an image name it **Exactly** like the one you are trying to replace and upload it to the folder it was originally in. Member images are named from title then 1-whatever. If more team members need to be added, just copy and paste the block of code and incrememnt the number by 1 so it will be easy to replace later.
+
 # Uploading the Code to the Website
 1. Login to [Muffin Man Hosting](https://muffinmanhosting.com/account) and sign in with the club's gmail.
 2. Click on *Login To cPanel* and Login
