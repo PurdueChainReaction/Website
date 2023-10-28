@@ -62,3 +62,13 @@ If you get an error after pushing and it mentions you need to do a pull first, j
 
 As you go through the website you will notice a lot of text surrounded by a ```<!--``` and ```-->```. These create a comment block. A comment block is something that will not be put in the website but can be read in the code.
 There are multiple places in the code where you can remove said lines to allow for certain boxes to be put on the webiste like the announcement box.
+
+# Uploading the Code to the Website
+1. Login to [Muffin Man Hosting](https://muffinmanhosting.com/account) and sign in with the club's gmail.
+2. Click on *Login To cPanel* and Login
+3. Under the *Files* tab, click on *Git Version Control*
+4. Click on *Manage* next to *Website Upload*
+5. Click on the *Pull or Deploy tab*
+6. Lastly Select *Update from Remote*
+
+This will upload the code that is stored in **the repository** not local code on your device. After updating, give it a minute and then open up the website to make sure that everything is running the way you expected.
