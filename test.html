@@ -12,12 +12,17 @@
         </div>
     </div>
     <script>
-        const url =  "https://script.googleusercontent.com/macros/echo?user_content_key=Dhoka7JVMi5x3jcIxc2_98_vqup8-VfHXcbU0kqQbS0nRfnyj0OwGnnR5BP6ekMweXDYIyjooaVQ9HyKBW-qV-EHm7vlqF5Bm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHEsHw5UlJEDAKE9XrYkv5hAbYK4Wq_5PNcPFcqFXWqwPu08o-fkZi1fyJCgo-tsWWG0ikI3xfLAiSqMa3z4DIoejCy2ksjUzdz9Jw9Md8uu&lib=M3sM-uiEp-vnUCWnpODry6o6QXBkvVjLr"
+        const url =  "https://script.google.com/macros/s/AKfycbwHjBOpdhJFaJp0kVNIsGuAxUpknjPb7GkhYhjzvIGX5zgf1aqh_ZcWDlgzhSKttkY/exec"
         fetch(url).then(response => response.text()).then(data => {
             let numbers = data
             var txt = document.createElement("span");
+            var totalHours = data.valueOf();
+            hours = parseInt(totalHours);
+            min = parseInt((totalHours - hours) * 60);
+            var output = hours + " hours and " + min + " minutes";
             txt.innerHTML = numbers;
-            number.appendChild(txt);
+            console.log(output);    
+            number.append(output);
         })
     </script>
 </body> 
