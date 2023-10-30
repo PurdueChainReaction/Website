@@ -101,10 +101,10 @@
 
         <div class="boxed">
           <div class="boxed-list">
-          <h4>The 2023-24 machine's construction is yet to begin, but our team is excitedly looking forward to starting the brainstorming 
-            process and kicking off another great year. Last year's machine was an epic casino heist based in fabulous Las Vegas, Nevada! 
-            Follow the thief as he steals the casino's precious Rube-y and makes his escape before kicking off a final goal in honor of 
-            the World Cup!</h4>
+          <h4 style="display:inline">The 2023-24 machine's construction has begun, and our team has chosen <i>Magic and Fantasy</i> as our theme. 
+            This year we have put a total of </h4><h4 style="display:inline" id="number"></h4><h4 style="display:inline"> into our machine so far!</h4>
+            <h4 style="display:inline"> While we still have a lot of work ahead of us we look forward to being able to compete in this years competition. 
+            To see some of our progress, check out our socials.</h4>
           </div>
         </div>
 
@@ -239,6 +239,20 @@
         x.className = x.className.replace(" w3-show", "");
       }
     }
+    
+    const url =  "https://script.google.com/macros/s/AKfycbzrXRjBHli2TbwfnlmgI6YIstHZF147tDcWAfDqRv7OF7pZYiJD4QFmtzalp17qkGDTHA/exec"
+    fetch(url).then(response => response.text()).then(data => {
+        let numbers = data
+        var txt = document.createElement("span");
+        var totalHours = data.valueOf();
+        hours = parseInt(totalHours);
+        min = parseInt((totalHours - hours) * 60);
+        var output = hours + " hours and " + min + " minutes";
+        txt.innerHTML = numbers;
+        console.log(output);    
+        number.append(output);
+    })
+   
     </script>
 </body>
 </html>
