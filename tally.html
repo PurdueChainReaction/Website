@@ -9,8 +9,18 @@
     <div class="boxed">
         <div class="boxed-list">
             
-            <h2><centre>175</centre></h2>
+            <centre><h1 id="number" class="title"></h1></centre>
         </div>
     </div>
     
+
+    <script>
+        const url =  "https://script.google.com/macros/s/AKfycbwL5pk0d56QmCrlrIG9BoAhXp28DWf6-jgXiPJ2t0x7XnGs4P5eLJ9kZFpA0EknrJsE/exec"
+        fetch(url).then(response => response.text()).then(data => {
+            let numbers = data
+            var txt = document.createElement("span");
+            txt.innerHTML = numbers;
+            number.append(txt);
+        })
+    </script>
 </body> 
