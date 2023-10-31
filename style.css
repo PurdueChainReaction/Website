@@ -420,6 +420,8 @@ span{
 
 .buttonOnBackground{
     -webkit-filter: brightness(100%);
+    font-size:large;
+    font-family: "text";
 }
 
 .buttonOnBackground:hover {
@@ -604,6 +606,9 @@ html {
     .people-list{
         padding-bottom: 100px;
     }
+    .buttonOnBackground{
+        font-size: medium;
+    }    
 }
 
 /*Extra small screens - phones*/
