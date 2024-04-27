@@ -21,28 +21,11 @@ To login to git through Visual Studio Code so you can update the repository, fir
 ![Github Login](https://github.com/PurdueChainReaction/Website/assets/58526449/7128e6de-27ba-4740-aed3-351c9292418c)
 
 ### How to Pull Your Code For the First Time
-To pull the code, you will be creating a folder using a git command that you can then access to change the code and then upload to the repository. 
-To pull the code the first time, click on *Termainal* on the top bar, then *New Terminal*.
+To pull the code, you will be creating a folder that you can then access to change the code and then upload to the repository. 
 
-![Terminal](https://github.com/PurdueChainReaction/Website/assets/58526449/90cb3845-3748-439d-a4c0-3e240af9cd2d)
-
-After you have open up the terminal, click on the dropdown arrow next to the plus, and then click on *Git Bash*.
-
-![Initial Pull](https://github.com/PurdueChainReaction/Website/assets/58526449/7df30051-09e3-4efb-b167-84be926b8dfb)
-
-In the terminal enter the command ```git pull https://github.com/PurdueChainReaction/Website```
-This will create a folder on your computer where the repository will be stored. You can only pull the folder if and only if you are a collaborator.
-
-After the intial pull, you can do pull commands if you have the folder open in explorer(This is explained in the next section). 
-To do this, click on *Source Control*, which is the icon of 3 circles with lines attaching them on the left bar. After that to pull the repository and update your folder, click on the 3 dots in the source control section, then *pull*.
-
-![Pull REquest](https://github.com/PurdueChainReaction/Website/assets/58526449/db74ac63-0a50-49a8-ada1-1225d5cd08e9)
-
-
-### How to Open Code Folder in Visual Code
-On the top bar select *File*, then *Open Folder*.
-
-![Open Folder](https://github.com/PurdueChainReaction/Website/assets/58526449/a88a9a49-d57e-49aa-a4ab-3dd66f70c9bd)
+First, scroll up to the top of this repository, and click the bright green "<> Code" button.    Then, copy and paste the link under the "Clone" text. 
+Next, open VSCode and click on the source control tab on the left. Then click "Clone Repository". The search bar will open at the top, where you paste the link you copied from earlier. 
+Choose a directory to save the repository in. Wait for this to finish, then it will prompt you to open the repository. Click "Open".
 
 ### How to Push Your Code
 To push after you have made changes, go back into source control and you should see a list of files you have edited, along with a button that says *Commit*. To update your files and push them into the repository, click on the plus next to *Changes*, it should say *Stage All Changes*.
