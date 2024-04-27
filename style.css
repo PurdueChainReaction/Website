@@ -7,6 +7,7 @@
     --mainBox: #ffc02a;
     --mainBoxHighlight: grey;
     --highlightedText: #ffc02a;
+    --btnBackground: #b98303;
     --sponsorHighlight: grey;
     --grey: #ced4da;
     --navBar: #101010;
@@ -138,9 +139,10 @@
     width:100%;
 }
 .icons{
-    font-size: 20px;
+    font-size: 40px;
     letter-spacing: 5px;
-
+    margin-right:10px;
+    
 }
 main{
     width:80% !important;
