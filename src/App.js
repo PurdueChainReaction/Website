@@ -1,24 +1,527 @@
-import logo from './logo.svg';
 import './App.css';
+import './W3Schools.css';
 
 function App() {
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x) {
+      if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    } else {
+      console.log("myFunction(): Could not find 'navDemo' element");
+    }
+  }
+
+  const url = "https://script.google.com/macros/s/AKfycbyWg7L_OTvQjMkbmWjbqL5ElmuPx40cjSvdLhBy7QMvvPWE0ExNfaRwCl8Neo93kB6IhA/exec"
+  fetch(url).then(response => response.text()).then(data => {
+    let numbers = data
+    var txt = document.createElement("span");
+    var totalHours = data.valueOf();
+    let hours = parseInt(totalHours);
+    let min = parseInt((totalHours - hours) * 60);
+    var output = hours + " hours and " + min + " minutes";
+    txt.innerHTML = numbers;
+    console.log(output);
+    //number.append(output); //What is "number?"
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
+    <>
+
+      <header style={{ position: "relative" }}>
+        {/*Top Navbars*/}
+        <div className="w3-top; header" id="home">
+          <div
+            className="w3-bar  w3-card w3-left-align w3-large heeder-large-screen"
+            style={{ backgroundColor: "var(--navBar)", fontFamily: '"text"' }}
+          >
+            <button
+              className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black w3-large"
+              style={{ color: "var(--navBarText)", border: "none", background: "none", cursor: "pointer" }}
+              onClick={myFunction}
+              title="Toggle Navigation Menu"
+            >
+              <i className="fa fa-bars" />
+            </button>
+            <div>
+              {/*Large screen navbar*/}
+              <a
+                href="#about"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                About
+              </a>
+              <a
+                href="#machine"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                Our Machine
+              </a>
+              <a
+                href="#about us"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                About Us
+              </a>
+              <a
+                href="#history"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                History
+              </a>
+              <a
+                href="#outreach"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                Outreach
+              </a>
+              {/*<a href="#sponsor" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black" style="color:var(--navBarText)">Sponsors</a>*/}
+              <a
+                href="#support"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                Support Us
+              </a>
+              <a
+                href="#contact"
+                className="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black"
+                style={{ color: "var(--navBarText)" }}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          {/* Navbar on small screens */}
+          <div
+            id="navDemo"
+            className="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large"
+            style={{ color: "var(--navBarText)", fontFamily: '"text"' }}
+          >
+            <a
+              href="#about"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              About
+            </a>
+            <a
+              href="#machine"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              Our Machine
+            </a>
+            <a
+              href="#about us"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              About Us
+            </a>
+            <a
+              href="#history"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              History
+            </a>
+            <a
+              href="#outreach"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              Outreach
+            </a>
+            {/*<a href="#sponsor" class="w3-bar-item w3-button w3-padding-large" onClick="myFunction()" style="color:var(--navBarText)">Sponsors</a>*/}
+            <a
+              href="#support"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              Support Us
+            </a>
+            <a
+              href="#contact"
+              className="w3-bar-item w3-button w3-padding-large"
+              onClick={myFunction()}
+              style={{ color: "var(--navBarText)" }}
+            >
+              Contact
+            </a>
+          </div>
+        </div>
       </header>
+      <section>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <div className="hero" id="about">
+          <div className="hero-description">
+            <div className="hero-text">
+              {/*Background Image for Title*/}
+              <img
+                id="background-video"
+                src="Background.webp"
+                alt="Team"
+                preload="none"
+              />
+              {/*Title*/}
+              <h1 className="hero-title">Boilermaker Rube Goldberg Team</h1>
+              {/*Description under title*/}
+              <p>
+                Were you wondering about the Boilermaker Rube Goldberg Team? Well
+                you've come to the right place! While Purdue has had multiple Rube
+                Goldberg Teams, our team is proud to be the longest lasting and to
+                have won the national competition many times throughout its
+                existence, the most recent of which was just this last year. We've
+                also appeared on Jimmy Kimmel Live back in 2014 and still hold the
+                World Record for the longest Rube Goldberg machine set in 2012! If
+                you want to learn more about us, stick around and Boiler up!
+              </p>
+              <span className="w3-text-white social" style={{ marginTop: '50px' }}>
+                {/*Social tags*/}
+                <p>
+                  <br />
+                  Follow us on Social media:
+                </p>
+                <div className="w3-margin-top">
+                  {/* Facebook logo */}
+                  <a href="https://www.facebook.com/boilermaker.chainreaction?locale=hu_HU">
+                    <i className="fa fa-facebook-official w3-hover-opacity icons" />
+                  </a>
+                  {/* Instagram Logo*/}
+                  <a href="https://www.instagram.com/boilermaker.rubegoldberg?igsh=MzRlODBiNWFlZA==">
+                    <i className="fa fa-instagram w3-hover-opacity icons" />
+                  </a>
+                  {/* X/Twitter Logo*/}
+                  <a href="https://twitter.com/BoilermakerCRT">
+                    <i className="fa fa-twitter w3-hover-opacity icons" />
+                  </a>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <main style={{ paddingBottom: 40 }}>
+        <div className="announcement" id="join" />
+        <h2 className="title">SAVE THE DATE!</h2>
+        <div className="announcement">
+          <div className="announcement-list">
+            <h4>
+              This year the national competition is being held in the Purdue Armory
+              on <b>Saturday, April 6th</b> and doors open at 8:00am. Our team will
+              compete at 2:00pm and you can watch either in person or you can watch
+              us on the livesteam, just click{" "}
+              <a href="https://www.youtube.com/watch?v=z3H576_HlKI">here</a>. The
+              event is free to attend and there is free parking across the street in
+              the parking garage
+              <br />
+              <br />
+              <b>Locations:</b>
+              <br />
+              Purdue Armory:{" "}
+              <a href="https://maps.app.goo.gl/vyWh4iJWkKtNz38a6">
+                812 3rd Street, West Lafayette, IN 47907
+              </a>
+              <br />
+              Parking: (University Street Parking Garage){" "}
+              <a href="https://maps.app.goo.gl/jcQFZrf813EDguKK7">
+                201 N. University St, West Lafayette, IN 47907
+              </a>
+              <br />
+              <br />
+              More information found{" "}
+              <a href="https://www.rubegoldberg.org/rube-goldberg-contests/the-rube-goldberg-machine-contest/">
+                here
+              </a>{" "}
+              at the official Rube Goldberg website
+            </h4>
+          </div>
+        </div>
+        {/* Google maps window: Go to here to create a different one: https://www.embed-map.com/ */}
+        <center>
+          <div
+            style={{
+              textDecoration: "none",
+              overflow: "hidden",
+              maxWidth: "100%",
+              width: 500,
+              height: 250,
+              borderRadius: 10,
+              marginTop: 15
+            }}
+          >
+            <div
+              id="google-maps-canvas"
+              style={{ height: "100%", width: "100%", maxWidth: "100%" }}
+            >
+              <iframe
+                style={{ height: "100%", width: "100%", border: 0 }}
+                frameBorder={0}
+                title="Location of the event"
+                src="https://www.google.com/maps/embed/v1/place?q=Purdue+Armory,+812+3rd+Street,+West+Lafayette,+Indiana,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&maptype=roadmap&zoom=15"
+              ></iframe>
+            </div>
+            <a
+              className="code-for-google-map"
+              rel="nofollow"
+              href="https://kbj9qpmy.com/hrn"
+              id="grab-maps-authorization"
+            >
+              Hosting Right Now
+            </a>
+            <style
+              dangerouslySetInnerHTML={{
+                __html:
+                  "\n        #google-maps-canvas img {\n          max-width: none !important;\n          background: none !important;\n          font-size: inherit;\n          font-weight: inherit;\n        }\n      "
+              }}
+            />
+          </div>
+        </center>
+        {/*DELETE LINE BELOW LINE TO ADD AN ANNOUNCEMENT*/}
+        {/*
+  <div class="announcement">
+    <div class="announcement-list">
+    <h4>Call-outs to learn more about our team will be held on Thursday, August 31st and Friday, September 1st from 7:00-8:00pm 
+      in ME 1130 (location may change). For more information about our team and how to apply, 
+      click below!<br><center><a href="callout">Join Now!</a></center></h4>
     </div>
+  </div>
+  */}
+        {/*DELETE LINE ABOVE LINE TO ADD AN ANNOUNCEMENT*/}
+        <div className="machine" id="machine" />
+        <h2 className="title">Our Machine!</h2>
+        <div className="boxed">
+          <div className="boxed-list">
+            <h4 style={{ display: "inline" }}>
+              The 2023-24 machine's construction has begun, and our team has chosen{" "}
+              <i>Magic and Fantasy</i> as our theme. This year we have put a total
+              of{" "}
+            </h4>
+            <h4 style={{ display: "inline" }} id="number"> </h4>
+            <h4 style={{ display: "inline" }}> into our machine so far!</h4>
+            <h4 style={{ display: "inline" }}>
+              {" "}
+              While we still have a lot of work ahead of us we look forward to being
+              able to compete in this year's competition. To see some of our
+              progress, check out our socials.
+            </h4>
+          </div>
+        </div>
+        <div className="boxed" id="about us" />
+        <h2 className="title">Meet the Team</h2>
+        <div className="boxed-list">
+          <p></p>
+          <center>Click on one of us to meet the whole team</center>
+          <p />
+          <div className="sponsor people-list">
+            {/*Every image links to members page*/}
+            <div className="sponsor-list people">
+              <a href="members">
+                <img src="/MemberImages/president.webp" alt="President" />
+              </a>
+            </div>
+            <div className="sponsor-list people">
+              <a href="members">
+                <img src="/MemberImages/captain.webp" alt="Captain" />
+              </a>
+            </div>
+            <div className="sponsor-list people">
+              <a href="members">
+                <img src="/MemberImages/treasurer.webp" alt="Treasurer" />
+              </a>
+            </div>
+            <div className="sponsor-list people">
+              <a href="members">
+                <img src="/MemberImages/vice.webp" alt="Vice President" />
+              </a>
+            </div>
+            <div className="sponsor-list people">
+              <a href="members">
+                <img src="/MemberImages/first.webp" alt="First Mate" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="boxed" id="history" />
+        <h2 className="title">History</h2>
+        <div className="boxed">
+          <div className="boxed-list">
+            <div className="game-image">
+              <img src="Images/TeamPhoto.webp" alt="Team" preload="none" />
+            </div>
+            <div className="store-text-description">
+              <span>
+                <i>
+                  The 2022-2023 Team (shown above) was composed of a variety of
+                  talented and dedicated individuals who put in over three thousand
+                  hours to build an incredible machine.
+                </i>
+              </span>
+              <h4>
+                In the spring of 1998, the PSPE Rube Goldberg Team was founded by a
+                freshman engineer named Shawn Jordan with the idea of creating a
+                Rube Goldberg team for Purdue University. With the backing of then
+                president, Karen Davis, the first team began the first of many
+                machines. With almost no budget, the first machines created by the
+                team were mostly constructed from low cost materials such as
+                cardboard, duct tape, and various give-a-away items from different
+                events around campus. Due to the low durability of these materials,
+                creating a reliable machine was a challenge, but due to their
+                dedication and creativity, the early groups still designed and built
+                many various machines to bring to competition. Since the club's
+                founding, this same competition has taken many different forms,
+                until it moved back to its home on Purdue's Campus in 2019 taking
+                the official name of the Purdue National Chain Reaction Competition
+                . In reflection of this move the team changed its name to match. A
+                few years later in 2022, the team split off from PSPE and became its
+                own self-funded student organization, the Boilermaker Rube Goldberg
+                Team.
+                {/*Links to history page*/}
+                <center>
+                  <a href="history">
+                    <button
+                      className="w3-btn w3-margin-top w3-round buttonOnBackground"
+                      style={{
+                        backgroundColor: "var(--btnBackground)",
+                        color: "var(--text)"
+                      }}
+                    >
+                      Click here to see our previous machines!
+                    </button>
+                  </a>
+                </center>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div className="boxed" id="outreach" />
+        <h2 className="title">Outreach</h2>
+        <div className="boxed">
+          <div className="boxed-list">
+            <div className="store-text-description">
+              <h4>
+                Interested in having our team talk to you and your group? We enjoy
+                finding opportunities to do outreach with elementary schools, clubs,
+                scout troops, or other organizations who want to learn more about
+                the world of Rube Goldberg and what we do! We would love to talk to
+                you and your friends about Rube Goldberg, our team, what we do, and
+                anything STEM. Reach out to us using the email below!
+              </h4>
+              {/*Links to Outreach Page*/}
+              <center>
+                <a href="outreach">
+                  <button
+                    className="w3-btn w3-margin-top w3-round buttonOnBackground"
+                    style={{
+                      backgroundColor: "var(--btnBackground)",
+                      color: "var(--text)"
+                    }}
+                  >
+                    To learn more, click here!
+                  </button>
+                </a>
+              </center>
+            </div>
+          </div>
+        </div>
+        {/* Sponsor section, currently commented out because no sponsors */}
+        {/*
+<div class="sponsor" id="sponsor"></div>
+<h2 class="title">Sponsors</h2>
+<div class="sponsor">
+  <div class="sponsor-list sponsor-item" style="width:310px; height:125px;">
+      Image of sponsor that links to their website
+      <a href="https://zyynlabs.com/" target="_blank"><img src="Images/zyynlabs.png" alt="ZyynLabs" style="width:300px; height:92px;"/></a>
+    </div>
+  </div>
+*/}
+        <div className="event-hero" style={{ position: "relative" }} id="support">
+          <div className="event-text">
+            <h1 className="event-title">Support Us!</h1>
+            <h4>
+              Want to support us and help us build our next great contraption? Check
+              out our Donate page and see how you or your business can help turn our
+              ideas into reality. We couldn't do any of this without our donors'
+              help!
+            </h4>
+            {/*Links To Donate Page*/}
+            <a href="donate">
+              <button
+                className="w3-btn w3-margin-top w3-round buttonOnBackground"
+                style={{
+                  backgroundColor: "var(--btnBackground)",
+                  color: "var(--text)"
+                }}
+              >
+                Donate
+              </button>
+            </a>
+          </div>
+        </div>
+        <h2 className="title">Reach out to us</h2>
+        <div className="boxed">
+          <div className="boxed-list">
+            <div className="boxed-text-description">
+              <h4>
+                Have questions or interested in working with us? Check out our
+                social media linked up top or contact us with the information below!
+                We'd love to hear from you!
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div
+          className="contact"
+          id="contact"
+          style={{ paddingBottom: "10px !important" }}
+        >
+          <div className="contact-list">
+            {/*Team Email*/}
+            <h5>
+              <span>
+                <i className="fa fa-envelope w3-xlarge w3-text-light-grey" />
+              </span>
+              <a href="mailto: boilerchainreaction@gmail.com">
+                boilermakerchainreaction@gmail.com
+              </a>
+            </h5>
+          </div>
+        </div>
+      </main>
+    </>
+
   );
 }
 
