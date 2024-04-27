@@ -62,6 +62,8 @@ A basic rundown of how css works:
 - Each line in the brackets is something that will change the asthetic of the final product.
 - To learn more about what each line does, go to [W3Schools CSS](https://www.w3schools.com/css/default.asp)
 
+Format the code automatically in VSCode by pressing [ALT]+[SHIFT]+[F] together. (Please do this O_O)
+
 ## Replacing Images
 To replace an image name it **Exactly** like the one you are trying to replace file type and name, then upload it to the folder it was originally in. Member images are named from title then 1-whatever. If more team members need to be added, just copy and paste the block of code and incrememnt the number by 1 so it will be easy to replace later.
 
