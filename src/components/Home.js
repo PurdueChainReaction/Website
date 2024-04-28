@@ -3,7 +3,7 @@ import './W3Schools.css';
 
 function App() {
   // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
+  function toggleMenu() {
     var x = document.getElementById("navDemo");
     if (x) {
       if (x.className.indexOf("w3-show") === -1) {
@@ -12,7 +12,7 @@ function App() {
         x.className = x.className.replace(" w3-show", "");
       }
     } else {
-      console.log("myFunction(): Could not find 'navDemo' element");
+      console.log("toggleMenu(): Could not find 'navDemo' element");
     }
   }
 
@@ -58,7 +58,7 @@ function App() {
             <button
               className="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black w3-large"
               style={{ color: "var(--navBarText)", border: "none", background: "none", cursor: "pointer" }}
-              onClick={myFunction}
+              onClick={toggleMenu}
               title="Toggle Navigation Menu"
             >
               <i className="fa fa-bars" />
@@ -126,7 +126,7 @@ function App() {
             <a
               href="#about"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               About
@@ -134,7 +134,7 @@ function App() {
             <a
               href="#machine"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               Our Machine
@@ -142,7 +142,7 @@ function App() {
             <a
               href="#about us"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               About Us
@@ -150,7 +150,7 @@ function App() {
             <a
               href="#history"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               History
@@ -158,16 +158,16 @@ function App() {
             <a
               href="#outreach"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               Outreach
             </a>
-            {/*<a href="#sponsor" class="w3-bar-item w3-button w3-padding-large" onClick="myFunction()" style="color:var(--navBarText)">Sponsors</a>*/}
+            {/*<a href="#sponsor" class="w3-bar-item w3-button w3-padding-large" onClick="toggleMenu()" style="color:var(--navBarText)">Sponsors</a>*/}
             <a
               href="#support"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               Support Us
@@ -175,7 +175,7 @@ function App() {
             <a
               href="#contact"
               className="w3-bar-item w3-button w3-padding-large"
-              onClick={myFunction()}
+              onClick={toggleMenu()}
               style={{ color: "var(--navBarText)" }}
             >
               Contact
