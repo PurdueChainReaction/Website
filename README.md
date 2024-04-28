@@ -39,7 +39,8 @@ After clicking the plus, it will move your file into a new section called *Stage
 If you get an error after pushing and it mentions you need to do a pull first, just go back and make a pull command and it should ask if you would like to *sync changes*. Accept that prompt. All that means is the version in the repository is different then the one you have and it will upload the tweaks you added and shouldn't affect the previous changes that were made in the last push. 
 
 # Running the website (With React and npm!)
-Running the website locally is easy with React! No extension is needed, just open the terminal at the bottom of the screen and type "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
+Running the website locally is easy with npm!
+No extension is needed, just open the terminal at the bottom of the screen and type "npm install" to install the dependencies. This is basically all of the code that the app uses from other places, and it will only have to be done the first time you clone this repository. Wait for this to finish, the enter the command "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
 
 # Editing the website
 [W3Schools HTML](https://www.w3schools.com/html/default.asp) and [W3Schools CSS](https://www.w3schools.com/css/default.asp) will be your best friend to learn more about the code of the website that is not explained here in this readme.
