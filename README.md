@@ -7,12 +7,12 @@ Firstly if you haven't already, make a github account. Then using the *PurdueCha
 
 ## Setting up Visual Code
 ### Extensions
-After Git and Visual Studio Code are downloaded, there are some extensions we need to get first so its easy to edit the website. To download extensions in Visual Studio Code, just click on the icon of 4 boxes on the left hand side. I recommend downloading the *GitHub Pull Requests and Issues* extension and the *Live Server* extension. The git extension makes pull requests(downloading the changed files) and push requests(uploading the files) easy to do. It also makes seeing what was changed between push requests.
+After Git and Visual Studio Code are downloaded, there are some extensions we need to get first so its easy to edit the website. To download extensions in Visual Studio Code, just click on the icon of 4 boxes on the left hand side. I recommend downloading the *GitHub Pull Requests and Issues* extension. The git extension makes pull requests(downloading the changed files) and push requests(uploading the files) easy to do. It also makes seeing what was changed between push requests.
 
 ![Extensions](https://github.com/PurdueChainReaction/Website/assets/58526449/a0b3dea8-c7a4-432c-aefa-b1c2ba980b2f)
-| Live Server                                                                                                         | GitHub Pull Requests and Issues                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| ![Live Server](https://github.com/PurdueChainReaction/Website/assets/58526449/23a9af94-ae97-4385-957d-0be5c228b503) | ![GitHub Pull](https://github.com/PurdueChainReaction/Website/assets/58526449/92784067-0d58-4dc3-b2fc-d19a1ca30b4e) |
+| GitHub Pull Requests and Issues                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------- |
+|![GitHub Pull](https://github.com/PurdueChainReaction/Website/assets/58526449/92784067-0d58-4dc3-b2fc-d19a1ca30b4e) |
 
 ## Setting up Git
 ### Logging Into Git
@@ -38,7 +38,9 @@ After clicking the plus, it will move your file into a new section called *Stage
 
 If you get an error after pushing and it mentions you need to do a pull first, just go back and make a pull command and it should ask if you would like to *sync changes*. Accept that prompt. All that means is the version in the repository is different then the one you have and it will upload the tweaks you added and shouldn't affect the previous changes that were made in the last push. 
 
-
+# Running the website (With React and npm!)
+Running the website locally is easy with npm!
+No extension is needed, just open the terminal at the bottom of the screen and type "npm install" to install the dependencies. This is basically all of the code that the app uses from other places, and it will only have to be done the first time you clone this repository. Wait for this to finish, the enter the command "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
 
 # Editing the website
 [W3Schools HTML](https://www.w3schools.com/html/default.asp) and [W3Schools CSS](https://www.w3schools.com/css/default.asp) will be your best friend to learn more about the code of the website that is not explained here in this readme.
@@ -54,7 +56,6 @@ A basic rundown of how html works:
 - If you make a block in the website that will look different but you aren't going to use that style more than once, add ```style="###"``` in the same area you see ```class="###"```. This will add a custom style to just that block of code.
 - Any time you see ```id="***"``` it is a tag that can be navigated to in the navbar. You can link to it using ```href="#***"```. The *#* is the prefix to the word *id* is equal to.
 - When linking to pages on the website just put ```href="page"``` **DO NOT PUT** ```href="page.html"``` the *.html* is not required for the website and looks better if it is not part of it.
-- To run the live webserver, right-click on the html page in the explorer tab and click on *Open With Live Server*. This will open the page in a browser for you to check. The links will not work because the *.html* is not in there but when it is uploaded to the website it will work.
 - To learn more about how html works, go to [W3Schools HTML](https://www.w3schools.com/html/default.asp)
 
 A basic rundown of how css works:
