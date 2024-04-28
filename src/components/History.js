@@ -1,0 +1,552 @@
+import React from "react"
+
+function History() {
+    return (
+        <>
+            <title>History</title>
+            <meta
+                name="description"
+                content="Learn more about our history and how we came to be!"
+            />
+            <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" />
+            <meta charSet="UTF-8" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="W3Schools.css" />
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+            <link rel="stylesheet" href="style.css" />
+            <title>Purdue Rube Goldberg Club</title>
+            <header style={{ position: "relative" }}>
+                <div className="w3-top; header" id="home">
+                    <div
+                        className="w3-bar w3-large heeder-large-screen"
+                        style={{ backgroundColor: "var(--navBar)", fontFamily: '"text"' }}
+                    >
+                        <a
+                            href="./"
+                            className="w3-bar-item w3-button w3-padding-large w3-hover-black"
+                        >
+                            Back To Main Page
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <main style={{ paddingBottom: 40 }}>
+                <div className="boxed-list">
+                    <div className="game-image">
+                        <h2 className="title">About Our Team</h2>
+                        <h4 className="store-text-description">
+                            Our team has a rich history dating back to 1998, where a group of
+                            multi-disciplinary students from the Purdue Society of Professional
+                            Engineers (PSPE) first created this organization and have since
+                            created a legacy and high standard of designing, constructing, and
+                            competing with machines in the annual national competition, now known
+                            as the 2024 Rube Goldberg Machine Contest. For over 25 years this team
+                            has been able to offer fantastic opportunities for students to bond
+                            over their love for all things creative and out of the box while at
+                            the same time learning more about tool-working and how to implement
+                            many concepts in mechanics, physics, chemistry and more.
+                            <br />
+                            <br />
+                            Over the years we have grown and established ourselves as a top
+                            competitor in the national competition and beyond, placing 1st in the
+                            last 2 competitions post-pandemic in 2022 and 2023, and finishing
+                            top-2 for each of the last 8 competitions dating back to 2014. On top
+                            of our success at competition, our organization has some very
+                            prestigious accomplishments including breaking the Guinness Book of
+                            World Records record for “Largest Rube Goldberg machine in
+                            competition” back in 2012 with a 300 step machine, as well as
+                            appearing on ABC’s Jimmy Kimmel Live in 2005, 2006 and 2015. On top of
+                            that, one of our machine’s was featured in an episode of Modern
+                            Marvels on The History Channel.
+                            <br />
+                            <br />
+                            The national competition has bounced around, recently moving back to
+                            Purdue in 2019, and just this year has been taken over by co-host of
+                            the show “Contraption Masters”, current “World’s Leading Authority” in
+                            everything Rube Goldberg, and former alumni of this organization, Zach
+                            Umperovitch. This new look competition is sponsored by Purdue’s
+                            College of Engineering and is once again in partnership with the Rube
+                            Goldberg Institute! We are so excited to see how this next iteration
+                            of the annual national competition will be like and how it can
+                            continue to expand and grow the world of Rube Goldberg machines! Our
+                            continued goal is to build another incredible, complex and exciting
+                            machine to compete in the competition with as well as expand our
+                            outreach more into the educational community to share our passion for
+                            what we do.
+                        </h4>
+                    </div>
+                </div>
+                <div className="boxed" id={2023}>
+                    <div className="boxed-list">
+                        <h2 className="title">Past Machines</h2>
+                        <div className="store-text-description">
+                            <h2 className="title">2023</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/wfsr3f1g97g?si=mHWlWkydRnojqQc_"
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+      gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Score A Goal
+                                <br />
+                                Theme: Heist In Las Vegas
+                                <br />
+                                Step Count: 78
+                                <br />
+                                Result: 1st Place
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed" id={2022}>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2022</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/CwjA4Nj_2Tk?si=GYPtoE_Ouxk7Gaua"
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+      gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Put Sunglasses on a Head
+                                <br />
+                                Theme: Vikings and Dragons
+                                <br />
+                                Step Count: 60
+                                <br />
+                                Result: 1st Place
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed" id={2021}>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2021</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/jNLT9JI2rDg?si=QQFYhGdcl1QQFnQI"
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+      gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Wrap a Present
+                                <br />
+                                Theme: Willy Wonka
+                                <br />
+                                Step Count: 42
+                                <br />
+                                Result: N/A
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed" id={2020}>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2020</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/9lRsIp55-II?si=HEa7YRA-dfSQo80R"
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+      gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Ring a Doorbell
+                                <br />
+                                Theme: Oregon Trail
+                                <br />
+                                Step Count: ???
+                                <br />
+                                Result: N/A
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed" id={2019}>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2019</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/X76Hj1dHzrc"
+                                title="2019 Purdue National Chain Reaction Competition Winner"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Put Toothpaste on a Tooth Brush
+                                <br />
+                                Theme: Spaceship Disaster
+                                <br />
+                                Step Count: 75
+                                <br />
+                                Result: 1st Place
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed" id="OlderMachines">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2018</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/zPVH2admAuw"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Pour A Bowl of Cereal
+                                <br />
+                                Theme: A Fantastical Adventure
+                                <br />
+                                Step Count: 75
+                                <br />
+                                Result: 1st Place
+                            </h4>
+                        </div>
+                    </div>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2017</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/kPTZ2sEKHWo"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Apply a Baind-Aid
+                                <br />
+                                Theme: Apply a Baind-Aid to a Broken Heart
+                                <br />
+                                Step Count: 72
+                                <br />
+                                Result: 2nd Place in National Competition
+                            </h4>
+                        </div>
+                    </div>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2016</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/BtDGDTUDO-8"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Open an Umbrella
+                                <br />
+                                Theme: A walk Down Main Street
+                                <br />
+                                Step Count: 74
+                                <br />
+                                Result: 2nd Place in Regional and National Competition
+                            </h4>
+                        </div>
+                    </div>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2015</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/MwJ1D4gD4Nw"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Erase a Chalkboard
+                                <br />
+                                Theme: A Day in the life of Rube
+                                <br />
+                                Step Count: 73
+                                <br />
+                                Result: 1st Place in Regional and National Competition
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2014</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/AmY-EBSvUcY"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Zip a Zipper
+                                <br />
+                                Theme: A Simple Way to Get Ready for Work
+                                <br />
+                                Step Count: 78
+                                <br />
+                                Result: 1st Place in Regional and National Competition. Won the
+                                People’s Choice at the Regional Competition. Won Legacy Award at
+                                National Competition.
+                                <br />
+                                This machine went on Jimmy Kimmel Live!
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2012</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/9Z9z33FKle0"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Inflate and Pop a Balloon
+                                <br />
+                                Theme: Rube's Revisited
+                                <br />
+                                Step Count: 300
+                                <br />
+                                Result: Won 1st place at the Regional Competition. Won the People’s
+                                Choice at the Regional Competition. Took 2nd Place at the National
+                                Competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2011</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/RuwUn-_p7m8"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Water a Plant
+                                <br />
+                                Theme: The Time Machine
+                                <br />
+                                Step Count: 244
+                                <br />
+                                Result: Won 1st place at the Regional Competition. Won the People’s
+                                Choice at the Regional Competition. Did not Place at the National
+                                Competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2010</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/oTruGNgTios"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: Dispense an appropriate amount of hand sanitizer into
+                                one's hand.
+                                <br />
+                                Theme: Rube's Workshop
+                                <br />
+                                Step Count: 176
+                                <br />
+                                Result: Won 1st place at the Regional Competition. Won the People’s
+                                Choice at the Regional Competition. Did not Place at the National
+                                Competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2009</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/ru0NLrPsQeg"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: To replace an incandescent light bulb with a more energy
+                                efficient light emitting design.
+                                <br />
+                                Theme: Blackout Vegas
+                                <br />
+                                Step Count: 101
+                                <br />
+                                Result: Won 3rd place at the Regional Competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2008</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/jN2yGpNpc38"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: To assemble a hamburger consisting of no less than one
+                                precooked meat patty, two vegetables and two condiments, sandwiched
+                                between two bun halves.
+                                <br />
+                                Theme: Around the World in 156 Steps
+                                <br />
+                                Step Count: 156
+                                <br />
+                                Result: Won 1st place at the Regional Competition. Won the People’s
+                                Choice Award at the Regional competition. Won 1st place at the
+                                National Competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2006</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/aZlj-br_uCQ"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: To cut or shred into strips five sheets of 8½ by 11
+                                paper and place the shredded paper in a recycle bin.
+                                <br />
+                                Theme: The Rube Machine Ate My Homework
+                                <br />
+                                Step Count: 215
+                                <br />
+                                Result: Won 1st place at the Regional and National competition. Won
+                                the People’s Choice Award at the Regional and National competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div className="boxed">
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">2005</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/3QwadEI9GwA"
+                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: To remove and replace two batteries in a flashlight,
+                                then turn it on
+                                <br />
+                                Theme: Blackout on Planet Rube
+                                <br />
+                                Step Count: 125
+                                <br />
+                                Result: Won 1st place at the Regional competition. Won the People’s
+                                Choice Award at the Regional competition. Won 1st place at the
+                                National competition. Won the People’s Choice Award at the National
+                                competition.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </>
+    );
+}
+
+export default History;
