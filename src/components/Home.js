@@ -216,7 +216,7 @@ function App() {
                 </p>
                 <div className="w3-margin-top">
                   {/* Facebook logo */}
-                  <a href="https://www.facebook.com/boilermaker.chainreaction?locale=hu_HU">
+                  <a href="https://www.facebook.com/boilermaker.chainreaction">
                     <i className="fa fa-facebook-official w3-hover-opacity icons" />
                   </a>
                   {/* Instagram Logo*/}
