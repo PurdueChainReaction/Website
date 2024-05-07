@@ -46,7 +46,7 @@ If you get an error after pushing and it mentions you need to do a pull first, j
   
 # Running the website (With React and npm)
 Running the website locally is easy with npm!
-No extension is needed, just open the terminal at the bottom of the screen and type "npm install" to install the dependencies. This is basically all of the code that the app uses from other places, and it will only have to be done the first time you clone this repository. Wait for this to finish, the enter the command "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
+No extension is needed, just open the terminal at the bottom of the screen and type "npm install" to install the dependencies. This is basically all of the code that the app uses from other places, and it will only have to be done the first time you clone this repository. Wait for this to finish, then enter the command "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
 
 # Editing the website
 [W3Schools HTML](https://www.w3schools.com/html/default.asp) and [W3Schools CSS](https://www.w3schools.com/css/default.asp) will be your best friend to learn more about the code of the website that is not explained here in this readme.
