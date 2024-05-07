@@ -38,7 +38,13 @@ After clicking the plus, it will move your file into a new section called *Stage
 
 If you get an error after pushing and it mentions you need to do a pull first, just go back and make a pull command and it should ask if you would like to *sync changes*. Accept that prompt. All that means is the version in the repository is different then the one you have and it will upload the tweaks you added and shouldn't affect the previous changes that were made in the last push. 
 
-# Running the website (With React and npm!)
+# Installing node
+  To run the website, you first need to install node. Install it from here: https://nodejs.org/en. Then, make sure that you add the directory where you installed it to your PATH variable. You can do this by searching "environment variables" in the start menu, clicking on the option that says "Edit the System Environment Variables", then in the window that pops up, click on the box near the bottom that says "environment variables". In the new window, find where it says "Path" in System Variables and click edit with it selected. Then, click "new" and enter the directory where you installed npm. You can click ok on all windows now, and npm should work in your VSCode repository. 
+  If it doesn't work, do the following:
+  open an administrator terminal by right clicking powershell and selecting "open as administrator". Then, run this command: "Set-ExecutionPolicy RemoteSigned" and then run this: "npm install -g npm". Restart VSCode and try again.
+  
+  
+# Running the website (With React and npm)
 Running the website locally is easy with npm!
 No extension is needed, just open the terminal at the bottom of the screen and type "npm install" to install the dependencies. This is basically all of the code that the app uses from other places, and it will only have to be done the first time you clone this repository. Wait for this to finish, the enter the command "npm start", and your browser will open with a development server that will automatically update with any changes as you save them.
 
