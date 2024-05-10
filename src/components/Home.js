@@ -1,7 +1,114 @@
 import './App.css';
 import './W3Schools.css';
+import { useState, useEffect } from "react";
 
 function App() {
+  //using "useState" to store and set the hoursString and embed it in the website.
+  const [hoursString, setHoursString] = useState("");
+
+  //useEffect hook will only run a single time when the website is initally rendered,
+  //due to the empty [] dependency array at the end.
+  useEffect(() => {
+    //update the hoursString
+    const url = "https://script.google.com/macros/s/AKfycbyWg7L_OTvQjMkbmWjbqL5ElmuPx40cjSvdLhBy7QMvvPWE0ExNfaRwCl8Neo93kB6IhA/exec"
+    fetch(url).then(response => response.text()).then(data => {
+      let numbers = data
+      var txt = document.createElement("span");
+      var totalHours = data.valueOf();
+      let hours = parseInt(totalHours);
+      let min = parseInt((totalHours - hours) * 60);
+      var output = hours + " hours and " + min + " minutes";
+      txt.innerHTML = numbers;
+      console.log("Fetched hours from spreadsheet: " + output);
+      setHoursString(output);
+    })
+  }, []);
+
+  // This defines a "BRGT event" react component that is rendered later in the jsx return function.
+  // The line below ignores linter errors when the BRGTevent is commented out
+  // eslint-disable-next-line
+  const BRGTevent = () => {
+    return (
+      <>
+        <div className="announcement" id="join" />
+        <h2 className="title">SAVE THE DATE!</h2>
+        <div className="announcement">
+          <div className="announcement-list">
+            <h4>
+              This year the national competition is being held in the Purdue Armory
+              on <b>Saturday, April 6th</b> and doors open at 8:00am. Our team will
+              compete at 2:00pm and you can watch either in person or you can watch
+              us on the livesteam, just click{" "}
+              <a href="https://www.youtube.com/watch?v=z3H576_HlKI">here</a>. The
+              event is free to attend and there is free parking across the street in
+              the parking garage
+              <br />
+              <br />
+              <b>Locations:</b>
+              <br />
+              Purdue Armory:{" "}
+              <a href="https://maps.app.goo.gl/vyWh4iJWkKtNz38a6">
+                812 3rd Street, West Lafayette, IN 47907
+              </a>
+              <br />
+              Parking: (University Street Parking Garage){" "}
+              <a href="https://maps.app.goo.gl/jcQFZrf813EDguKK7">
+                201 N. University St, West Lafayette, IN 47907
+              </a>
+              <br />
+              <br />
+              More information found{" "}
+              <a href="https://www.rubegoldberg.org/rube-goldberg-contests/the-rube-goldberg-machine-contest/">
+                here
+              </a>{" "}
+              at the official Rube Goldberg website
+            </h4>
+          </div>
+        </div>
+        {/* Google maps window: Go to here to create a different one: https://www.embed-map.com/ */}
+        <center>
+          <div
+            style={{
+              textDecoration: "none",
+              overflow: "hidden",
+              maxWidth: "100%",
+              width: 500,
+              height: 250,
+              borderRadius: 10,
+              marginTop: 15
+            }}
+          >
+            <div
+              id="google-maps-canvas"
+              style={{ height: "100%", width: "100%", maxWidth: "100%" }}
+            >
+              <iframe
+                style={{ height: "100%", width: "100%", border: 0 }}
+                frameBorder={0}
+                title="Location of the event"
+                src="https://www.google.com/maps/embed/v1/place?q=Purdue+Armory,+812+3rd+Street,+West+Lafayette,+Indiana,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&maptype=roadmap&zoom=15"
+              ></iframe>
+            </div>
+            <a
+              className="code-for-google-map"
+              rel="nofollow"
+              href="https://kbj9qpmy.com/hrn"
+              id="grab-maps-authorization"
+            >
+              Hosting Right Now
+            </a>
+            <style
+              dangerouslySetInnerHTML={{
+                __html:
+                  "\n        #google-maps-canvas img {\n          max-width: none !important;\n          background: none !important;\n          font-size: inherit;\n          font-weight: inherit;\n        }\n      "
+              }}
+            />
+          </div>
+        </center>
+      </>
+    )
+  };
+
   // Used to toggle the menu on small screens when clicking on the menu button
   function toggleMenu() {
     var x = document.getElementById("navDemo");
@@ -16,38 +123,8 @@ function App() {
     }
   }
 
-  const url = "https://script.google.com/macros/s/AKfycbyWg7L_OTvQjMkbmWjbqL5ElmuPx40cjSvdLhBy7QMvvPWE0ExNfaRwCl8Neo93kB6IhA/exec"
-  fetch(url).then(response => response.text()).then(data => {
-    let numbers = data
-    var txt = document.createElement("span");
-    var totalHours = data.valueOf();
-    let hours = parseInt(totalHours);
-    let min = parseInt((totalHours - hours) * 60);
-    var output = hours + " hours and " + min + " minutes";
-    txt.innerHTML = numbers;
-    console.log(output);
-    //number.append(output); //What is "number?"
-  })
-
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <>
-
       <header style={{ position: "relative" }}>
         {/*Top Navbars*/}
         <div className="w3-top; header" id="home">
@@ -234,81 +311,11 @@ function App() {
         </div>
       </section>
       <main style={{ paddingBottom: 40 }}>
-        <div className="announcement" id="join" />
-        <h2 className="title">SAVE THE DATE!</h2>
-        <div className="announcement">
-          <div className="announcement-list">
-            <h4>
-              This year the national competition is being held in the Purdue Armory
-              on <b>Saturday, April 6th</b> and doors open at 8:00am. Our team will
-              compete at 2:00pm and you can watch either in person or you can watch
-              us on the livesteam, just click{" "}
-              <a href="https://www.youtube.com/watch?v=z3H576_HlKI">here</a>. The
-              event is free to attend and there is free parking across the street in
-              the parking garage
-              <br />
-              <br />
-              <b>Locations:</b>
-              <br />
-              Purdue Armory:{" "}
-              <a href="https://maps.app.goo.gl/vyWh4iJWkKtNz38a6">
-                812 3rd Street, West Lafayette, IN 47907
-              </a>
-              <br />
-              Parking: (University Street Parking Garage){" "}
-              <a href="https://maps.app.goo.gl/jcQFZrf813EDguKK7">
-                201 N. University St, West Lafayette, IN 47907
-              </a>
-              <br />
-              <br />
-              More information found{" "}
-              <a href="https://www.rubegoldberg.org/rube-goldberg-contests/the-rube-goldberg-machine-contest/">
-                here
-              </a>{" "}
-              at the official Rube Goldberg website
-            </h4>
-          </div>
-        </div>
-        {/* Google maps window: Go to here to create a different one: https://www.embed-map.com/ */}
-        <center>
-          <div
-            style={{
-              textDecoration: "none",
-              overflow: "hidden",
-              maxWidth: "100%",
-              width: 500,
-              height: 250,
-              borderRadius: 10,
-              marginTop: 15
-            }}
-          >
-            <div
-              id="google-maps-canvas"
-              style={{ height: "100%", width: "100%", maxWidth: "100%" }}
-            >
-              <iframe
-                style={{ height: "100%", width: "100%", border: 0 }}
-                frameBorder={0}
-                title="Location of the event"
-                src="https://www.google.com/maps/embed/v1/place?q=Purdue+Armory,+812+3rd+Street,+West+Lafayette,+Indiana,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&maptype=roadmap&zoom=15"
-              ></iframe>
-            </div>
-            <a
-              className="code-for-google-map"
-              rel="nofollow"
-              href="https://kbj9qpmy.com/hrn"
-              id="grab-maps-authorization"
-            >
-              Hosting Right Now
-            </a>
-            <style
-              dangerouslySetInnerHTML={{
-                __html:
-                  "\n        #google-maps-canvas img {\n          max-width: none !important;\n          background: none !important;\n          font-size: inherit;\n          font-weight: inherit;\n        }\n      "
-              }}
-            />
-          </div>
-        </center>
+
+        {/* Remove this comment to render a BRGT event.
+         <BRGTevent/> */}
+
+
         {/*DELETE LINE BELOW LINE TO ADD AN ANNOUNCEMENT*/}
         {/*
   <div class="announcement">
@@ -325,17 +332,12 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <h4 style={{ display: "inline" }}>
-              The 2023-24 machine's construction has begun, and our team has chosen{" "}
-              <i>Magic and Fantasy</i> as our theme. This year we have put a total
-              of{" "}
-            </h4>
-            <h4 style={{ display: "inline" }} id="number"> </h4>
-            <h4 style={{ display: "inline" }}> into our machine so far!</h4>
-            <h4 style={{ display: "inline" }}>
-              {" "}
-              While we still have a lot of work ahead of us we look forward to being
-              able to compete in this year's competition. To see some of our
-              progress, check out our socials.
+              The 2023-24 machine has been completed with the theme of&nbsp;
+              <i>Magic and Fantasy</i>. This year we have put a total
+              of {hoursString} into our machine!
+              This year we finished 1st at the National Rube Goldberg Machine Contest, winning the best
+              last step and people's choice awards. To see more about the machine,
+              check out our socials.
             </h4>
           </div>
         </div>
