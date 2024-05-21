@@ -167,7 +167,7 @@ function Donate() {
                         <h4 className="store-text-description">
                             We appreciate your consideration of donating to the team! There are
                             multiple ways you can send in donations, and if you have any
-                            questions, please contact us at
+                            questions, please contact us at&nbsp;
                             <a href="mailto: boilerchainreaction@gmail.com">
                                 boilermakerchainreaction@gmail.com
                             </a>
