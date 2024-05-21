@@ -1,6 +1,44 @@
 import React from "react"
 
 function History() {
+    const HistoryYear = ({ year, ytLink, finalStep, theme, steps, result, extra}) => {
+        return (
+            <>
+
+                <div className="boxed" id={year}>
+                    <div className="boxed-list">
+                        <div className="store-text-description">
+                            <h2 className="title">{year}</h2>
+                            <iframe
+                                id="iframeVideo"
+                                width="100%"
+                                height="100%"
+                                src={ytLink}
+                                title="YouTube video player"
+                                frameBorder={0}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen=""
+                            />
+                            <h4>
+                                Final Step: {finalStep}
+                                <br />
+                                Theme: {theme}
+                                <br />
+                                Step Count: {steps}
+                                <br />
+                                Result: {result}
+                                {extra ? 
+                                (<> 
+                                <br /> {extra}
+                                </>)
+                                 : ""}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </>
+        )
+    }
     return (
         <>
             <title>History</title>
@@ -81,468 +119,153 @@ function History() {
                         </h4>
                     </div>
                 </div>
-                <div className="boxed" id={2023}>
-                    <div className="boxed-list">
-                        <h2 className="title">Past Machines</h2>
-                        <div className="store-text-description">
-                            <h2 className="title">2023</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/wfsr3f1g97g?si=mHWlWkydRnojqQc_"
-                                title="YouTube video player"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-      gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Score A Goal
-                                <br />
-                                Theme: Heist In Las Vegas
-                                <br />
-                                Step Count: 78
-                                <br />
-                                Result: 1st Place
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed" id={2022}>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2022</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/CwjA4Nj_2Tk?si=GYPtoE_Ouxk7Gaua"
-                                title="YouTube video player"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-      gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Put Sunglasses on a Head
-                                <br />
-                                Theme: Vikings and Dragons
-                                <br />
-                                Step Count: 60
-                                <br />
-                                Result: 1st Place
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed" id={2021}>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2021</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/jNLT9JI2rDg?si=QQFYhGdcl1QQFnQI"
-                                title="YouTube video player"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-      gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Wrap a Present
-                                <br />
-                                Theme: Willy Wonka
-                                <br />
-                                Step Count: 42
-                                <br />
-                                Result: N/A
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed" id={2020}>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2020</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/9lRsIp55-II?si=HEa7YRA-dfSQo80R"
-                                title="YouTube video player"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-      gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Ring a Doorbell
-                                <br />
-                                Theme: Oregon Trail
-                                <br />
-                                Step Count: ???
-                                <br />
-                                Result: N/A
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed" id={2019}>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2019</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/X76Hj1dHzrc"
-                                title="2019 Purdue National Chain Reaction Competition Winner"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Put Toothpaste on a Tooth Brush
-                                <br />
-                                Theme: Spaceship Disaster
-                                <br />
-                                Step Count: 75
-                                <br />
-                                Result: 1st Place
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+                <h2 className="title">Past Machines</h2>
+                <HistoryYear year="2024"
+                    ytLink="https://www.youtube.com/embed/WSJG7OMH7gg?si=8oKiLTl5O_y_NuyE"
+                    finalStep="Put toothpaste on a toothbrush"
+                    theme="Fantasy"
+                    steps="120"
+                    result="Won 1st Place at National Competition. Awarded best last step and people's choice awards."
+                />
+                <HistoryYear year="2023"
+                    ytLink="https://www.youtube.com/embed/wfsr3f1g97g?si=mHWlWkydRnojqQc_"
+                    finalStep="Score A Goal"
+                    theme="Heist In Las Vegas"
+                    steps="78"
+                    result="1st Place"
+                />
+                <HistoryYear year="2022"
+                    ytLink="https://www.youtube.com/embed/CwjA4Nj_2Tk?si=GYPtoE_Ouxk7Gaua"
+                    finalStep="Put Sunglasses on a Head"
+                    theme="Vikings and Dragons"
+                    steps="60"
+                    result="1st Place"
+                />
+                <HistoryYear year="2021"
+                    ytLink="https://www.youtube.com/embed/jNLT9JI2rDg?si=QQFYhGdcl1QQFnQI"
+                    finalStep="Wrap a Present"
+                    theme="Willy Wonka"
+                    steps="42"
+                    result="N/A"
+                />
+                <HistoryYear year="2020"
+                    ytLink="https://www.youtube.com/embed/9lRsIp55-II?si=HEa7YRA-dfSQo80R"
+                    finalStep="Ring a Doorbell"
+                    theme="Oregon Trail"
+                    steps="???"
+                    result="N/A"
+                />
+                <HistoryYear year="2019"
+                    ytLink="https://www.youtube.com/embed/X76Hj1dHzrc"
+                    finalStep="Put Toothpaste on a Tooth Brush"
+                    theme="Spaceship Disaster"
+                    steps="75"
+                    result="1st Place"
+                />
+
                 <div className="boxed" id="OlderMachines">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2018</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/zPVH2admAuw"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Pour A Bowl of Cereal
-                                <br />
-                                Theme: A Fantastical Adventure
-                                <br />
-                                Step Count: 75
-                                <br />
-                                Result: 1st Place
-                            </h4>
-                        </div>
-                    </div>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2017</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/kPTZ2sEKHWo"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Apply a Baind-Aid
-                                <br />
-                                Theme: Apply a Baind-Aid to a Broken Heart
-                                <br />
-                                Step Count: 72
-                                <br />
-                                Result: 2nd Place in National Competition
-                            </h4>
-                        </div>
-                    </div>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2016</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/BtDGDTUDO-8"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Open an Umbrella
-                                <br />
-                                Theme: A walk Down Main Street
-                                <br />
-                                Step Count: 74
-                                <br />
-                                Result: 2nd Place in Regional and National Competition
-                            </h4>
-                        </div>
-                    </div>
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2015</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/MwJ1D4gD4Nw"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Erase a Chalkboard
-                                <br />
-                                Theme: A Day in the life of Rube
-                                <br />
-                                Step Count: 73
-                                <br />
-                                Result: 1st Place in Regional and National Competition
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2014</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/AmY-EBSvUcY"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Zip a Zipper
-                                <br />
-                                Theme: A Simple Way to Get Ready for Work
-                                <br />
-                                Step Count: 78
-                                <br />
-                                Result: 1st Place in Regional and National Competition. Won the
-                                People’s Choice at the Regional Competition. Won Legacy Award at
-                                National Competition.
-                                <br />
-                                This machine went on Jimmy Kimmel Live!
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2012</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/9Z9z33FKle0"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Inflate and Pop a Balloon
-                                <br />
-                                Theme: Rube's Revisited
-                                <br />
-                                Step Count: 300
-                                <br />
-                                Result: Won 1st place at the Regional Competition. Won the People’s
-                                Choice at the Regional Competition. Took 2nd Place at the National
-                                Competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2011</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/RuwUn-_p7m8"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Water a Plant
-                                <br />
-                                Theme: The Time Machine
-                                <br />
-                                Step Count: 244
-                                <br />
-                                Result: Won 1st place at the Regional Competition. Won the People’s
-                                Choice at the Regional Competition. Did not Place at the National
-                                Competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2010</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/oTruGNgTios"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: Dispense an appropriate amount of hand sanitizer into
-                                one's hand.
-                                <br />
-                                Theme: Rube's Workshop
-                                <br />
-                                Step Count: 176
-                                <br />
-                                Result: Won 1st place at the Regional Competition. Won the People’s
-                                Choice at the Regional Competition. Did not Place at the National
-                                Competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2009</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/ru0NLrPsQeg"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: To replace an incandescent light bulb with a more energy
-                                efficient light emitting design.
-                                <br />
-                                Theme: Blackout Vegas
-                                <br />
-                                Step Count: 101
-                                <br />
-                                Result: Won 3rd place at the Regional Competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2008</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/jN2yGpNpc38"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: To assemble a hamburger consisting of no less than one
-                                precooked meat patty, two vegetables and two condiments, sandwiched
-                                between two bun halves.
-                                <br />
-                                Theme: Around the World in 156 Steps
-                                <br />
-                                Step Count: 156
-                                <br />
-                                Result: Won 1st place at the Regional Competition. Won the People’s
-                                Choice Award at the Regional competition. Won 1st place at the
-                                National Competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2006</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/aZlj-br_uCQ"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: To cut or shred into strips five sheets of 8½ by 11
-                                paper and place the shredded paper in a recycle bin.
-                                <br />
-                                Theme: The Rube Machine Ate My Homework
-                                <br />
-                                Step Count: 215
-                                <br />
-                                Result: Won 1st place at the Regional and National competition. Won
-                                the People’s Choice Award at the Regional and National competition.
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxed">
-                    <div className="boxed-list">
-                        <div className="store-text-description">
-                            <h2 className="title">2005</h2>
-                            <iframe
-                                id="iframeVideo"
-                                width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/3QwadEI9GwA"
-                                title="2018 Rube Goldberg Machine Contest Champions: Purdue PSPE"
-                                frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
-                            />
-                            <h4>
-                                Final Step: To remove and replace two batteries in a flashlight,
-                                then turn it on
-                                <br />
-                                Theme: Blackout on Planet Rube
-                                <br />
-                                Step Count: 125
-                                <br />
-                                Result: Won 1st place at the Regional competition. Won the People’s
-                                Choice Award at the Regional competition. Won 1st place at the
-                                National competition. Won the People’s Choice Award at the National
-                                competition.
-                            </h4>
-                        </div>
-                    </div>
+                    <HistoryYear year="2018"
+                        ytLink="https://www.youtube.com/embed/zPVH2admAuw"
+                        finalStep="Pour A Bowl of Cereal"
+                        theme="A Fantastical Adventure"
+                        steps="75"
+                        result="1st Place"
+                    />
+                    <HistoryYear year="2017"
+                        ytLink="https://www.youtube.com/embed/kPTZ2sEKHWo"
+                        finalStep="Apply a Baind-Aid"
+                        theme="Apply a Baind-Aid to a Broken Heart"
+                        steps="72"
+                        result="2nd Place in National Competition"
+                    />
+                    <HistoryYear year="2016"
+                        ytLink="https://www.youtube.com/embed/BtDGDTUDO-8"
+                        finalStep="Open an Umbrella"
+                        theme="A walk Down Main Street"
+                        steps="74"
+                        result="2nd Place in National Competition"
+                    />
+                    <HistoryYear year="2015"
+                        ytLink="https://www.youtube.com/embed/MwJ1D4gD4Nw"
+                        finalStep="Erase a Chalkboard"
+                        theme="A Day in the life of Rube"
+                        steps="73"
+                        result="1st Place in Regional and National Competition"
+                    />
+                    <HistoryYear year="2014"
+                        ytLink="https://www.youtube.com/embed/AmY-EBSvUcY"
+                        finalStep="Zip a Zipper"
+                        theme="A Simple Way to Get Ready for Work"
+                        steps="78"
+                        result="1st Place in Regional and National Competition. Won the
+                        People's Choice at the Regional Competition. Won Legacy Award at
+                        National Competition."
+                        extra="This machine went on Jimmy Kimmel Live!"
+                    />
+                    <HistoryYear year="2012"
+                        ytLink="https://www.youtube.com/embed/9Z9z33FKle0"
+                        finalStep="Inflate and Pop a Balloon"
+                        theme="Rube's Revisited"
+                        steps="300"
+                        result=" Won 1st place at the Regional Competition. Won the People's
+                        Choice at the Regional Competition. Took 2nd Place at the National
+                        Competition."
+                    />
+                    <HistoryYear year="2011"
+                        ytLink="https://www.youtube.com/embed/RuwUn-_p7m8"
+                        finalStep="Water a Plant"
+                        theme="The Time Machine"
+                        steps="244"
+                        result="Won 1st place at the Regional Competition. Won the People's
+                        Choice at the Regional Competition. Did not Place at the National
+                        Competition."
+                    />
+                    <HistoryYear year="2010"
+                        ytLink="https://www.youtube.com/embed/oTruGNgTios"
+                        finalStep="Dispense an appropriate amount of hand sanitizer into one's hand."
+                        theme="Rube's Workshop"
+                        steps="176"
+                        result="Won 1st place at the Regional Competition. Won the People's
+                        Choice at the Regional Competition. Did not Place at the National
+                        Competition."
+                    />
+                    <HistoryYear year="2009"
+                        ytLink="https://www.youtube.com/embed/ru0NLrPsQeg"
+                        finalStep="To replace an incandescent light bulb with a more energy efficient light emitting design."
+                        theme="Blackout Vegas"
+                        steps="101"
+                        result="Won 3rd place at the Regional Competition."
+                    />
+                    <HistoryYear year="2008"
+                        ytLink="https://www.youtube.com/embed/jN2yGpNpc38"
+                        finalStep="To assemble a hamburger consisting of no less than one precooked meat patty, two vegetables 
+                        and two condiments, sandwiched between two bun halves."
+                        theme="Around the World in 156 Steps"
+                        steps="156"
+                        result="Won 1st place at the Regional Competition. Won the People's
+                        Choice Award at the Regional competition. Won 1st place at the
+                        National Competition"
+                    />
+                    <HistoryYear year="2006"
+                        ytLink="https://www.youtube.com/embed/aZlj-br_uCQ"
+                        finalStep="To cut or shred into strips five sheets of 8½ by 11
+                        paper and place the shredded paper in a recycle bin."
+                        theme="The Rube Machine Ate My Homework"
+                        steps="215"
+                        result="Won 1st place at the Regional and National competition. Won
+                        the People's Choice Award at the Regional and National competition."
+                    />
+                    <HistoryYear year="2005"
+                        ytLink="https://www.youtube.com/embed/3QwadEI9GwA"
+                        finalStep="To remove and replace two batteries in a flashlight,
+                        then turn it on"
+                        theme="Blackout on Planet Rube"
+                        steps="125"
+                        result="Won 1st place at the Regional competition. Won the People's
+                        Choice Award at the Regional competition. Won 1st place at the
+                        National competition. Won the People's Choice Award at the National
+                        competition."
+                    />
                 </div>
             </main>
         </>
