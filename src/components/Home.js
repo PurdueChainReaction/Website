@@ -381,7 +381,7 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <div className="game-image">
-              <img src="Images/TeamPhoto.webp" alt="Team" preload="none" />
+              <img src="Images/TeamPhoto2024.webp" alt="Team" preload="none" />
             </div>
             <div className="store-text-description">
               <span>

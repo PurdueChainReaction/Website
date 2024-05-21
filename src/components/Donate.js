@@ -44,7 +44,7 @@ function Donate() {
                 </h2>
                 <div className="boxed-list">
                     <div className="game-image">
-                        <img src="/TeamPhoto.webp" alt="Team" preload="none" />
+                        <img src="/TeamPhoto2024.webp" alt="Team" preload="none" />
                     </div>
                 </div>
                 <div className="boxed-list">
