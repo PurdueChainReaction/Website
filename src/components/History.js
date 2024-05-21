@@ -9,7 +9,6 @@ function History() {
                     <div className="boxed-list">
                         <div className="store-text-description">
                             <h2 className="title">{year}</h2>
-                            <center>
                             <iframe
                                 id="iframeVideo"
                                 width="100%"
@@ -17,10 +16,9 @@ function History() {
                                 src={ytLink}
                                 title="YouTube video player"
                                 frameBorder={0}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen=""
+                                allow="web-share; fullscreen"
+                                
                             />
-                            </center>
                             <h4>
                                 Final Step: {finalStep}
                                 <br />
