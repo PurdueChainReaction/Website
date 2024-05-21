@@ -9,6 +9,7 @@ function History() {
                     <div className="boxed-list">
                         <div className="store-text-description">
                             <h2 className="title">{year}</h2>
+                            <center>
                             <iframe
                                 id="iframeVideo"
                                 width="100%"
@@ -19,6 +20,7 @@ function History() {
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen=""
                             />
+                            </center>
                             <h4>
                                 Final Step: {finalStep}
                                 <br />

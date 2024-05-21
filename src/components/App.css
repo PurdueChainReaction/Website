@@ -82,7 +82,7 @@
 }
 
 #iframeVideo {
-  width: 90vw;
+  width: 75vw;
   height: 50vw;
   object-fit: cover;
   position:relative;
