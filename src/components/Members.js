@@ -1,6 +1,35 @@
 import React from "react"
 
 function Members() {
+    const MemberCard = ({ imagePath, name, role, text }) => {
+        return (<div className="team">
+            <div className="team-member-text-img">
+                <img src={imagePath} alt={role ? role : "No role"} preload="none" />
+            </div>
+            <div className="team-member-text">
+                <h1 className="hero-title name">{name}</h1>
+                {
+                    role === undefined ?
+                        <h6>&nbsp;</h6> :
+                        <h3 className={`role ${role === "Webmaster" ? 'text-rainbow-animation' : ''}`}>{role}</h3>
+                }
+
+                {text}
+            </div>
+        </div>)
+    }
+    const MemberText = ({ year, major, onTeam, hometown, highschool, hobbies, fact }) => {
+        return (<>
+            <p>Year - {year}</p>
+            <p>Major - {major}</p>
+            <p>Year(s) on Team - {onTeam}</p>
+            <p>Hometown - {hometown}</p>
+            <p>Highschool - {highschool}</p>
+            <p>Hobbies - {hobbies}</p>
+            <p>Interesting Fact - {fact}</p>
+        </>)
+    }
+
     return (
         <>
             <title>Our Team</title>
@@ -34,350 +63,319 @@ function Members() {
                     </div>
                 </div>
             </header>
+
             <div className="mainTeam">
-                <div className="team">
-                    {/*Each one of these blocks repeats so delete or copy and paste
-                To add more/less members*/}
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/president.webp" alt="President" preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Tim Giannini</h1>
-                        <h3 className="role">President</h3>
-                        <p>Year - Senior</p>
-                        <p>
-                            Major - Robotics Engineering Technology and Mechatronics Engineering
-                            Technology
-                        </p>
-                        <p>Year(s) on Team - Four</p>
-                        <p>Hometown - Munster, IN</p>
-                        <p>Highschool - Munster High School</p>
-                        <p>Hobbies - Choir, Playing sports, Podcasting, and Weightlifting</p>
-                        <p>
-                            Interesting Fact - My sister and I are 4th generation Purdue students
-                        </p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/captain.webp" alt="Captain" preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Colby Lee</h1>
-                        <h3 className="role">Captain</h3>
-                        <p>Year - Senior</p>
-                        <p>Major - Mechanical Engineering</p>
-                        <p>Year(s) on Team - Four</p>
-                        <p>Hometown - Hanover, MA</p>
-                        <p>Highschool - Hanover High School</p>
-                        <p>
-                            Hobbies - Cooking, Music Production, and making Rube Goldberg Machines
-                        </p>
-                        <p>Interesting Fact - I exist in the Star Wars Cannon Universe</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/vice.webp" alt="Vice President" preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Noah Dapp</h1>
-                        <h3 className="role">Vice President</h3>
-                        <p>Year - Junior</p>
-                        <p>Major - Energy Engineering Technology</p>
-                        <p>Year(s) on Team - Two</p>
-                        <p>Hometown - Garrett, IN</p>
-                        <p>Highschool - Garrett High School</p>
-                        <p>Hobbies - Golf, Dnd, Video games</p>
-                        <p>Interesting Fact - I install solar panels in the summer</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/first.webp" alt="First Mate" preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Creigh Dircksen</h1>
-                        <h3 className="role">First Mate</h3>
-                        <p>Year - Junior</p>
-                        <p>Major - Electrical Engineering Technology</p>
-                        <p>Year(s) on Team - Three</p>
-                        <p>Hometown - Garrett , IN</p>
-                        <p>Highschool - Garrett High School</p>
-                        <p>Hobbies - Soccer, DnD, and Rube</p>
-                        <p>Interesting Fact - I can't do a backflip</p>
-                    </div>
-                </div>
+                {/* Tim Giannini */}
+                <MemberCard
+                    imagePath="MemberImages/president.webp"
+                    name="Tim Giannini"
+                    role="President"
+                    text={<MemberText
+                        year="Senior"
+                        major="Robotics Engineering Technology and Mechatronics Engineering Technology"
+                        onTeam="Four"
+                        hometown="Munster, IN"
+                        highschool="Munster High School"
+                        hobbies="Choir, Playing sports, Podcasting, and Weightlifting"
+                        fact="My sister and I are 4th generation Purdue students"
+                    />}
+                />
+
+                {/* Colby Lee */}
+                <MemberCard
+                    imagePath="MemberImages/captain.webp"
+                    name="Colby Lee"
+                    role="Captain"
+                    text={<MemberText
+                        year="Senior"
+                        major="Mechanical Engineering"
+                        onTeam="Four"
+                        hometown="Hanover, MA"
+                        highschool="Hanover High School"
+                        hobbies="Cooking, Music Production, and making Rube Goldberg Machines"
+                        fact="I exist in the Star Wars Cannon Universe"
+                    />}
+                />
+
+                {/* Noah Dapp */}
+                <MemberCard
+                    imagePath="MemberImages/vice.webp"
+                    name="Noah Dapp"
+                    role="Vice President"
+                    text={<MemberText
+                        year="Junior"
+                        major="Energy Engineering Technology"
+                        onTeam="Two"
+                        hometown="Garrett, IN"
+                        highschool="Garrett High School"
+                        hobbies="Golf, Dnd, Video games"
+                        fact="I install solar panels in the summer"
+                    />}
+                />
+
+                {/* Creigh Dircksen */}
+                <MemberCard
+                    imagePath="MemberImages/first.webp"
+                    name="Creigh Dircksen"
+                    role="First Mate"
+                    text={<MemberText
+                        year="Junior"
+                        major="Electrical Engineering Technology"
+                        onTeam="Three"
+                        hometown="Garrett, IN"
+                        highschool="Garrett High School"
+                        hobbies="Soccer, DnD, and Rube"
+                        fact="I can't do a backflip"
+                    />}
+                />
+
+                {/* Merle Yin */}
                 <a
                     href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUQcmljayByb2xsIG5vIGFkcw%3D%3D"
                     style={{ textDecoration: "none" }}
                 >
-                    <div className="team">
-                        <div className="team-member-text-img">
-                            <img
-                                src="MemberImages/treasurer.webp"
-                                alt="Treasurer"
-                                preload="none"
-                            />
-                        </div>
-                        <div className="team-member-text">
-                            <h1 className="hero-title name">Merle Yin</h1>
-                            <h3 className="role">Treasurer</h3>
-                            <p>Year - Sophomore</p>
-                            <p>Major - Industrial Design and AIP</p>
-                            <p>Year(s) on Team - Two</p>
-                            <p>Hometown - Wouldn't you like to know</p>
-                            <p>Highschool - Mennonite Collegiate Institute</p>
-                            <p>Hobbies - Screaming, Crying, Throwing up</p>
-                            <p>
-                                Interesting Fact - I'm am actually just 3 mice in a trench coat{" "}
-                            </p>
-                        </div>
-                    </div>
+                    <MemberCard
+                        imagePath="MemberImages/treasurer.webp"
+                        name="Merle Yin"
+                        role="Treasurer"
+                        text={<MemberText
+                            year="Sophomore"
+                            major="Industrial Design and AIP"
+                            onTeam="Two"
+                            hometown="Wouldn't you like to know"
+                            highschool=" Mennonite Collegiate Institute"
+                            hobbies="Screaming, Crying, Throwing up"
+                            fact="I'm actually just 3 mice in a trench coat"
+                        />}
+                    />
                 </a>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/webmaster.webp" alt="Webmaster" preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Nick Durnil</h1>
-                        <h3 className="role text-rainbow-animation">Webmaster</h3>
-                        <p>Year - Junior</p>
-                        <p>Major - Computer Engineering</p>
-                        <p>Year(s) on Team - Two</p>
-                        <p>Hometown - Carmel, IN</p>
-                        <p>Highschool - Carmel High School</p>
-                        <p>
-                            Hobbies - Bouldering, Camping, Making electronics, Coding pointless
-                            gadgets
-                        </p>
-                        <p>Interesting Fact - People usually don't hear me approach them</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/5.webp" alt={5} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Carmen Woodall</h1>
-                        <h3 className="role text-rainbow-animation">Webmaster</h3>
-                        <p>Year - Sophomore</p>
-                        <p>Major - Cybersecurity and Infrastructure Network Engineering</p>
-                        <p>Year(s) on Team - Two</p>
-                        <p>Hometown - Nevada, IA</p>
-                        <p>Highschool - Western Boone Junior Senior High School</p>
-                        <p>Hobbies - Fishing, DND, Reading, Writing, Being sleep deprived </p>
-                        <p>Interesting Fact - I’ve gone deep sea fishing</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/1.webp" alt={1} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">W. Rhodes Lacy</h1>
-                        {/*If no role add &nbsp to keep propper spacing*/}
-                        <h6>&nbsp;</h6>
-                        <p>Year - Super Senior</p>
-                        <p>Major - AAE</p>
-                        <p>Year(s) on Team - Let's call it four</p>
-                        <p>Hometown - Indianapolis, IN</p>
-                        <p>Highschool - ???</p>
-                        <p>Hobbies - D&amp;D, sending out job applications</p>
-                        <p>Interesting Fact - I broke five bones in a pillow fight</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/2.webp" alt={2} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Freddie Zahn</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Super Senior</p>
-                        <p>Major - Industrial Engineering</p>
-                        <p>Year(s) on Team - Four</p>
-                        <p>Hometown - Cincinnati, OH</p>
-                        <p>Highschool - Indian Hill High School</p>
-                        <p>Hobbies - Cooking, Running, Traveling in really long car rides</p>
-                        <p>Interesting Fact - I moved to China and lived their for 4 years</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/3.webp" alt={3} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Raymond Kwok</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Senior</p>
-                        <p>Major - Mechanical Engineering</p>
-                        <p>Year(s) on Team - Three</p>
-                        <p>Hometown - Queens, New York</p>
-                        <p>Highschool - Forest Hills High School</p>
-                        <p>
-                            Hobbies - PC Gaming, Reading japanese manga, Watching esports, Playing
-                            8 ball pool
-                        </p>
-                        <p>
-                            Interesting Fact -{" "}
+
+                {/* Nick Durnil */}
+                <MemberCard
+                    imagePath="MemberImages/webmaster.webp"
+                    name="Nick Durnil"
+                    role="Webmaster"
+                    text={<MemberText
+                        year="Junior"
+                        major="Computer Engineering"
+                        onTeam="Two"
+                        hometown="Carmel, IN"
+                        highschool="Carmel High School"
+                        hobbies="Bouldering, Camping, Making electronics, Coding pointless gadgets"
+                        fact="People usually don't hear me approach them"
+                    />}
+                />
+
+                {/* Carmen Woodall */}
+                <MemberCard
+                    imagePath="MemberImages/5.webp"
+                    name="Carmen Woodall"
+                    role="Webmaster"
+                    text={<MemberText
+                        year="Sophomore"
+                        major="Cybersecurity and Infrastructure Network Engineering"
+                        onTeam="Two"
+                        hometown="Nevada, IA"
+                        highschool="Western Boone Junior Senior High School"
+                        hobbies="Fishing, DND, Reading, Writing, Being sleep deprived"
+                        fact="I’ve gone deep sea fishing"
+                    />}
+                />
+
+                {/* W. Rhodes Lacy */}
+                <MemberCard
+                    imagePath="MemberImages/1.webp"
+                    name="W. Rhodes Lacy"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Super Senior"
+                        major="AAE"
+                        onTeam="Let's call it four"
+                        hometown="Indianapolis, IN"
+                        highschool="???"
+                        hobbies="D&D, sending out job applications"
+                        fact="I broke five bones in a pillow fight"
+                    />}
+                />
+
+                {/* Freddie Zahn */}
+                <MemberCard
+                    imagePath="MemberImages/2.webp"
+                    name="Freddie Zahn"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Super Senior"
+                        major="Industrial Engineering"
+                        onTeam="Four"
+                        hometown="Cincinnati, OH"
+                        highschool="Indian Hill High School"
+                        hobbies="Cooking, Running, Traveling in really long car rides"
+                        fact="I moved to China and lived there for 4 years"
+                    />}
+                />
+
+                {/* Raymond Kwok */}
+                <MemberCard
+                    imagePath="MemberImages/3.webp"
+                    name="Raymond Kwok"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Senior"
+                        major="Mechanical Engineering"
+                        onTeam="Three"
+                        hometown="Queens, New York"
+                        highschool="Forest Hills High School"
+                        hobbies="PC Gaming, Reading japanese manga, Watching esports, Playing 8 ball pool"
+                        fact={<>&nbsp;
                             <a href="https://www.youtube.com/watch?v=eOpJOVAt5Y4&list=FLbVIofoo9MYqp0pI34OkE_g&index=24">
                                 This
                             </a>
-                            is what happens 99% of the time in my head throughout the day
-                        </p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/4.webp" alt={4} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Loral Sarver</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Senior</p>
-                        <p>Major - Visual Art Education</p>
-                        <p>Year(s) on Team - Two</p>
-                        <p>Hometown - Valparaiso, IN</p>
-                        <p>Highschool - Valparaiso High School</p>
-                        <p>Hobbies - Drawing, Karaoke, Watching movies</p>
-                        <p>Interesting Fact - I have 10 siblings</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/6.webp" alt={6} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Zachary Wilson</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Junior</p>
-                        <p>Major - Robotics Engineering Technology </p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Geneva, Il</p>
-                        <p>Highschool - Geneva High School</p>
-                        <p>Hobbies - 3D Printing/Design, PC gaming, Camping, Writing Poetry</p>
-                        <p>Interesting Fact - I am a high level beat saber player</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/7.webp" alt={7} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Lauren Britten</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Freshmen</p>
-                        <p>Major - First Year Engineering </p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Woodbury, MN</p>
-                        <p>Highschool - Math and Science Academy</p>
-                        <p>Hobbies - Reading, Writing, Listening to music</p>
-                        <p>Interesting Fact - ???</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/8.webp" alt={8} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Ryan Capstick</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Sophomore</p>
-                        <p>Major - Mechanical Engineering</p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Lincolnshire, IL</p>
-                        <p>Highschool - Stevenson High School</p>
-                        <p>Hobbies - Volleyball, Rock Climbing, Cooking</p>
-                        <p>Interesting Fact - I had emergency plastic surgery in 5th grade</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/9.webp" alt={9} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Olivia Yin-Dolvig</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Freshman</p>
-                        <p>Major - First-Year Engineering (thinking Mechanical Engineering)</p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Beaverton, OR</p>
-                        <p>Highschool - Westview High School</p>
-                        <p>Hobbies - Mountain biking, Model making, Miniature painting</p>
-                        <p>
-                            Interesting Fact - I once spent three hours shuffling cards to learn
-                            how to bridge shuffle
-                        </p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/10.webp" alt={10} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Tyler Kenchanh</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Junior</p>
-                        <p>Major - Industrial Engineering Technology</p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Fort Wayne, IN</p>
-                        <p>Highschool - Carroll High School</p>
-                        <p>
-                            Hobbies - Balisong (Butterfly Knife) collecting, Modifying, and
-                            Flipping, Cooking, Learning, Origami, Cars
-                        </p>
-                        <p>Interesting Fact - I am left-handed</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/11.webp" alt={11} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Andrew Thompson</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Sophomore</p>
-                        <p>Major - Computer Science and AI</p>
-                        <p>Year(s) on Team - One</p>
-                        <p>Hometown - Naperville, IL</p>
-                        <p>Highschool - Neuqua Valley HS</p>
-                        <p>Hobbies - 3D printing, Reading, Badminton, Robotics</p>
-                        <p>Interesting Fact - I own eight different JRR Tolkien books</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/12.webp" alt={12} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Margaret Prokopy</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Sophomore</p>
-                        <p>Major - Biomedical Engineering</p>
-                        <p>Year(s) on Team - Two</p>
-                        <p>Hometown - West Lafayette, IN</p>
-                        <p>Highschool - West Lafayette Jr./Sr. High School</p>
-                        <p>Hobbies - Violin, Digital art, Reading sci-fi/fantasy, Chess</p>
-                        <p>Interesting Fact - I love sushi</p>
-                    </div>
-                </div>
-                <div className="team">
-                    <div className="team-member-text-img">
-                        <img src="MemberImages/13.webp" alt={13} preload="none" />
-                    </div>
-                    <div className="team-member-text">
-                        <h1 className="hero-title name">Drew Gaston</h1>
-                        <h6>&nbsp;</h6>
-                        <p>Year - Senior</p>
-                        <p>Major - Nuclear Engineering</p>
-                        <p>Year(s) on Team - Three</p>
-                        <p>Hometown - Kansas City, MO</p>
-                        <p>Highschool - Staley High School</p>
-                        <p>Hobbies - Rubik's Cubing/ Solving Puzzles, Crocheting, Baking</p>
-                        <p>Interesting Fact - I never pick up cards because I already Drew </p>
-                    </div>
-                </div>
+                            &nbsp;is what happens 99% of the time in my head throughout the day </>}
+                    />}
+                />
+
+                {/* Loral Sarver */}
+                <MemberCard
+                    imagePath="MemberImages/4.webp"
+                    name="Loral Sarver"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Senior"
+                        major="Visual Art Education"
+                        onTeam="Two"
+                        hometown="Valparaiso, IN"
+                        highschool="Valparaiso High School"
+                        hobbies="Drawing, Karaoke, Watching movies"
+                        fact="I have 10 siblings"
+                    />}
+                />
+
+                {/* Zachary Wilson */}
+                <MemberCard
+                    imagePath="MemberImages/6.webp"
+                    name="Zachary Wilson"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Junior"
+                        major="Robotics Engineering Technology"
+                        onTeam="One"
+                        hometown="Geneva, Il"
+                        highschool="Geneva High School"
+                        hobbies="3D Printing/Design, PC gaming, Camping, Writing Poetry"
+                        fact="I am a high level beat saber player"
+                    />}
+                />
+
+                {/* Lauren Britten */}
+                <MemberCard
+                    imagePath="MemberImages/7.webp"
+                    name="Lauren Britten"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Freshman"
+                        major="First Year Engineering"
+                        onTeam="One"
+                        hometown="Woodbury, MN"
+                        highschool="Math and Science Academy"
+                        hobbies="Reading, Writing, Listening to music"
+                        fact="???"
+                    />}
+                />
+
+                {/* Ryan Capstick */}
+                <MemberCard
+                    imagePath="MemberImages/8.webp"
+                    name="Ryan Capstick"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Sophomore"
+                        major="Mechanical Engineering"
+                        onTeam="One"
+                        hometown="Lincolnshire, IL"
+                        highschool="Stevenson High School"
+                        hobbies="Volleyball, Rock Climbing, Cooking"
+                        fact="I had emergency plastic surgery in 5th grade"
+                    />}
+                />
+
+                {/* Olivia Yin-Dolvig */}
+                <MemberCard
+                    imagePath="MemberImages/9.webp"
+                    name="Olivia Yin-Dolvig"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Freshman"
+                        major="First-Year Engineering (thinking Mechanical Engineering)"
+                        onTeam="One"
+                        hometown="Beaverton, OR"
+                        highschool="Westview High School"
+                        hobbies="Mountain biking, Model making, Miniature painting"
+                        fact="I once spent three hours shuffling cards to learn how to bridge shuffle"
+                    />}
+                />
+
+                {/* Tyler Kenchanh */}
+                <MemberCard
+                    imagePath="MemberImages/10.webp"
+                    name="Tyler Kenchanh"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Junior"
+                        major="Industrial Engineering Technology"
+                        onTeam="One"
+                        hometown="Fort Wayne, IN"
+                        highschool="Carroll High School"
+                        hobbies="Balisong (Butterfly Knife) collecting, Modifying, and Flipping, Cooking, Learning, Origami, Cars"
+                        fact="I am left-handed"
+                    />}
+                />
+
+                {/* Andrew Thompson */}
+                <MemberCard
+                    imagePath="MemberImages/11.webp"
+                    name="Andrew Thompson"
+                    role="Webmaster"
+                    text={<MemberText
+                        year="Sophomore"
+                        major="Computer Science"
+                        onTeam="One"
+                        hometown="Naperville, IL"
+                        highschool="Neuqua Valley High School"
+                        hobbies="3D printing, Reading, Badminton, Robotics"
+                        fact="I own nine different JRR Tolkien books"
+                    />}
+                />
+
+                {/* Margaret Prokopy */}
+                <MemberCard
+                    imagePath="MemberImages/12.webp"
+                    name="Margaret Prokopy"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Sophomore"
+                        major="Biomedical Engineering"
+                        onTeam="Two"
+                        hometown="West Lafayette, IN"
+                        highschool="West Lafayette Jr./Sr. High School"
+                        hobbies="Violin, Digital art, Reading sci-fi/fantasy, Chess"
+                        fact="I love sushi"
+                    />}
+                />
+                {/* Drew Gaston */}
+                <MemberCard
+                    imagePath="MemberImages/13.webp"
+                    name="Drew Gaston"
+                    /* Leave role undefined if there is none */
+                    text={<MemberText
+                        year="Senior"
+                        major="Nuclear Engineering"
+                        onTeam="Three"
+                        hometown="Kansas City, MO"
+                        highschool="Staley High School"
+                        hobbies="Rubik's Cubing/ Solving Puzzles, Crocheting, Baking"
+                        fact="I never pick up cards because I already Drew"
+                    />}
+                />
             </div>
         </>
 

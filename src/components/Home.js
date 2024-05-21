@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   // This defines a "BRGT event" react component that is rendered later in the jsx return function.
-  // The line below ignores linter errors when the BRGTevent is commented out
+  // The line below ignores annoying linter errors when the BRGTevent is commented out
   // eslint-disable-next-line
   const BRGTevent = () => {
     return (
@@ -65,6 +65,7 @@ function App() {
             </h4>
           </div>
         </div>
+       
         {/* Google maps window: Go to here to create a different one: https://www.embed-map.com/ */}
         <center>
           <div
@@ -314,7 +315,6 @@ function App() {
 
         {/* Remove this comment to render a BRGT event.
          <BRGTevent/> */}
-
 
         {/*DELETE LINE BELOW LINE TO ADD AN ANNOUNCEMENT*/}
         {/*
