@@ -25,6 +25,6 @@ jobs:
           switches: '-avz --delete'
           path: ./build/
           remote_path: /home/boilermakercrt/public_html/
-          remote_host: ${{ secrets.FTP_SERVER }}
-          remote_user: ${{ secrets.SFTP_ADDRESS }}
+          remote_host: ${{ secrets.SFTP_ADDRESS }}
+          remote_user: ${{ secrets.FTP_USER }}
           remote_key: ${{ secrets.SFTP_KEY }} 
