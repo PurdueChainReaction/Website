@@ -3,7 +3,7 @@ name: Deploy to CPanel
 on:
   push:
     branches:
-      - main  # Adjust this if your default branch is not 'main'
+      - main  # Adjust if your default branch is not 'main'
 
 jobs:
   deploy:
@@ -19,12 +19,30 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to CPanel via SFTP
-        uses: burnett01/rsync-deployments@5.1
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+        shell: bash
+
+      - name: Add SSH key to the agent
+        run: |
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa
+        shell: bash
+
+      - name: Set up SSH config
+        run: |
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null" > ~/.ssh/config
+        shell: bash
+
+      - name: Deploy to CPanel via SCP
+        uses: appleboy/scp-action@master
         with:
-          switches: '-avz --delete'
-          path: ./build/
-          remote_path: /home/boilermakercrt/public_html/
-          remote_host: ${{ secrets.FTP_SERVER }}
-          remote_user: ${{ secrets.FTP_USER }}
-          remote_key: ${{ secrets.SFTP_KEY }}
+          host: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          key: ${{ secrets.SFTP_KEY }}
+          target: /home/boilermakercrt/public_html/
+          source: ./build/
+
