@@ -115,7 +115,9 @@ function Callout() {
         <h4>
           Want to find out more by hearing from us face-to-face? Come to one of
           our call-out meetings on August 23rd or August 29th from 7:00-8:00
-          pm at WTHR 172!
+          pm at WTHR 172. Also, we will be tabling in front of WALC Wednesday,
+           August 21st 12:00-3:00 PM, so feel free to ask us any questions you 
+           may have there!
         </h4>
       </div>
     </div>
