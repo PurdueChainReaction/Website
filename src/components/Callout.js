@@ -114,11 +114,8 @@ function Callout() {
         </h2>
         <h4>
           Want to find out more by hearing from us face-to-face? Come to one of
-          our call-out meetings on August 31st or September 1st from 7:00-8:00
-          pm at ME1130 (location may be subject to change). You might also see
-          us out around campus, like at the Be-Involved Fair Saturday, August
-          19th from 12pm-3pm or in front of WALC, feel free to come over and
-          chat, we're always happy to answer questions!
+          our call-out meetings on August 23rd or August 29th from 7:00-8:00
+          pm at WTHR 172!
         </h4>
       </div>
     </div>
@@ -128,7 +125,7 @@ function Callout() {
     <div className="announcement">
       <div className="announcement-list">
         <h4>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSceVoLJ012egpAA4KxzHfx6WiTrWKXYMM4V0GVjEzmJzcnZPw/viewform?usp=sf_link">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3CKqbnkOzp9nnU9NarI_FFlrWR3EaHdPoIlsiArFtBGRA2w/viewform?usp=sf_link">
             JOIN NOW!
           </a>
         </h4>

@@ -317,15 +317,16 @@ function App() {
          <BRGTevent/> */}
 
         {/*DELETE LINE BELOW LINE TO ADD AN ANNOUNCEMENT*/}
-        {/*
+        {
   <div class="announcement">
     <div class="announcement-list">
-    <h4>Call-outs to learn more about our team will be held on Thursday, August 31st and Friday, September 1st from 7:00-8:00pm 
-      in ME 1130 (location may change). For more information about our team and how to apply, 
-      click below!<br><center><a href="callout">Join Now!</a></center></h4>
+    <h4>Call-outs to learn more about our team will be held on Friday, August 23 and Thursday, August 29th from 7:00-8:00pm 
+      in WTHR 172. For more information about our team and how to apply, 
+      click below!</h4>
+    <h4 style={{marginTop: "0"}}><center><a href="callout">Join Now!</a></center></h4>
     </div>
   </div>
-  */}
+  }
         {/*DELETE LINE ABOVE LINE TO ADD AN ANNOUNCEMENT*/}
         <div className="machine" id="machine" />
         <h2 className="title">Our Machine!</h2>
