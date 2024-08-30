@@ -320,7 +320,7 @@ function App() {
         {
   <div class="announcement">
     <div class="announcement-list">
-    <h4>Call-outs to learn more about our team will be held on Friday, August 23 and Thursday, August 29th from 7:00-8:00pm 
+    <h4>Callouts to learn more about our team will be held on Friday, August 23 and Thursday, August 29th from 7:00-8:00pm 
       in WTHR 172. For more information about our team and how to apply, 
       click below!</h4>
     <h4 style={{marginTop: "0"}}><center><a href="callout">Join Now!</a></center></h4>
