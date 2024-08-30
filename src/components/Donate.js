@@ -168,7 +168,7 @@ function Donate() {
                             We appreciate your consideration of donating to the team! There are
                             multiple ways you can send in donations, and if you have any
                             questions, please contact us at&nbsp;
-                            <a href="mailto: boilerchainreaction@gmail.com">
+                            <a href="mailto: boilerrubegoldberg@gmail.com">
                                 boilermakerchainreaction@gmail.com
                             </a>
                         </h4>

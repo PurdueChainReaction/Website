@@ -516,8 +516,8 @@ function App() {
               <span>
                 <i className="fa fa-envelope w3-xlarge w3-text-light-grey" />
               </span>
-              <a href="mailto: boilerchainreaction@gmail.com">
-                boilermakerchainreaction@gmail.com
+              <a href="mailto:boilerrubegoldberg@gmail.com">
+              boilerrubegoldberg@gmail.com
               </a>
             </h5>
           </div>
