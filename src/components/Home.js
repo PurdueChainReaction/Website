@@ -1,10 +1,14 @@
 import './App.css';
 import './W3Schools.css';
 import { useState, useEffect } from "react";
+import Papa from 'papaparse'; // for csv parsing
+
 
 function App() {
   //using "useState" to store and set the hoursString and embed it in the website.
   const [hoursString, setHoursString] = useState("");
+  const [members, setMembers] = useState([]);
+
 
   //useEffect hook will only run a single time when the website is initally rendered,
   //due to the empty [] dependency array at the end.
@@ -22,6 +26,21 @@ function App() {
       console.log("Fetched hours from spreadsheet: " + output);
       setHoursString(output);
     })
+
+    //parse and store the member data
+    fetch('members.csv')
+            .then((response) => response.text())
+            .then((csvText) => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (results) => {
+                        console.log("results: ");
+                        console.log(results);
+                        setMembers(results.data);
+                    },
+                });
+            });
   }, []);
 
   // This defines a "BRGT event" react component that is rendered later in the jsx return function.
@@ -317,7 +336,7 @@ function App() {
          <BRGTevent/> */}
 
         {/*DELETE LINE BELOW LINE TO ADD AN ANNOUNCEMENT*/}
-        {
+        {/*
   <div class="announcement">
     <div class="announcement-list">
     <h4>Callouts to learn more about our team will be held on Friday, August 23 and Thursday, August 29th from 7:00-8:00pm 
@@ -326,7 +345,7 @@ function App() {
     <h4 style={{marginTop: "0"}}><center><a href="callout">Join Now!</a></center></h4>
     </div>
   </div>
-  }
+  */}
         {/*DELETE LINE ABOVE LINE TO ADD AN ANNOUNCEMENT*/}
         <div className="machine" id="machine" />
         <h2 className="title">Our Machine!</h2>
@@ -348,35 +367,39 @@ function App() {
           <p></p>
           <center>Click on one of us to meet the whole team</center>
           <p />
-          <div className="sponsor people-list">
+          
             {/*Every image links to members page*/}
-            <div className="sponsor-list people">
+            {members[0] && (
+              <div className="sponsor people-list">
+              <div className="sponsor-list people">
               <a href="members">
-                <img src="/MemberImages/president.webp" alt="President" />
+                <img src={"/MemberImages/"+members[0].picture} alt="President" />
               </a>
             </div>
             <div className="sponsor-list people">
               <a href="members">
-                <img src="/MemberImages/captain.webp" alt="Captain" />
+                <img src={"/MemberImages/"+members[1].picture} alt="Captain" />
               </a>
             </div>
             <div className="sponsor-list people">
               <a href="members">
-                <img src="/MemberImages/treasurer.webp" alt="Treasurer" />
+                <img src={"/MemberImages/"+members[2].picture} alt="Treasurer" />
               </a>
             </div>
             <div className="sponsor-list people">
               <a href="members">
-                <img src="/MemberImages/vice.webp" alt="Vice President" />
+                <img src={"/MemberImages/"+members[3].picture} alt="Vice President" />
               </a>
             </div>
             <div className="sponsor-list people">
               <a href="members">
-                <img src="/MemberImages/first.webp" alt="First Mate" />
+                <img src={"/MemberImages/"+members[4].picture} alt="First Mate" />
               </a>
             </div>
+            </div>
+            )}
+            
           </div>
-        </div>
         <div className="boxed" id="history" />
         <h2 className="title">History</h2>
         <div className="boxed">
@@ -459,7 +482,7 @@ function App() {
             </div>
           </div>
         </div>
-        {/* Sponsor section, currently commented out because no sponsors */}
+        {/* Sponsor section, currently commented out because no sponsors D:  */}
         {/*
 <div class="sponsor" id="sponsor"></div>
 <h2 class="title">Sponsors</h2>

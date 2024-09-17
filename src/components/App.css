@@ -242,20 +242,22 @@ h3{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  transition: transform 0.3s ease;
   font-family: "text";
 }
 .sponsor-list img{
   border:1px solid var(--border);
   background: var(--background) ;
   box-shadow: 0 8px 40px 0 var(--announcementBox);
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
   border-radius: 10px;
   border: 4px solid var(--border);
+  
 }
 .sponsor-list:hover{
   transform: scale(1.05);
+  
 }
 h3{
   color:var(--text);
