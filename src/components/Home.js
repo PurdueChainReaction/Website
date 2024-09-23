@@ -2,11 +2,31 @@ import './App.css';
 import './W3Schools.css';
 import { useState, useEffect } from "react";
 import Papa from 'papaparse'; // for csv parsing
+import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer } from 'recharts';
 
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div style={{
+        backgroundColor: '#fff', 
+        border: '1px solid #ccc', 
+        borderRadius: '8px', 
+        padding: '10px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+      }}>
+        <p style={{ color: '#000' }}>{`Date: ${payload[0].payload.date}`}</p>
+        <p style={{ color: '#cc9102' }}>{`Hours: ${payload[0].value}`}</p>
+      </div>
+    );
+  }
+
+  return null;
+};
 
 function App() {
   //using "useState" to store and set the hoursString and embed it in the website.
   const [hoursString, setHoursString] = useState("");
+  const [dayHours, setDayHours] = useState([])
   const [members, setMembers] = useState([]);
 
 
@@ -14,17 +34,27 @@ function App() {
   //due to the empty [] dependency array at the end.
   useEffect(() => {
     //update the hoursString
-    const url = "https://script.google.com/macros/s/AKfycbyWg7L_OTvQjMkbmWjbqL5ElmuPx40cjSvdLhBy7QMvvPWE0ExNfaRwCl8Neo93kB6IhA/exec"
-    fetch(url).then(response => response.text()).then(data => {
-      let numbers = data
+    const url = "https://script.googleusercontent.com/macros/echo?user_content_key=wfwxEQ6whRl41N64NgSDUmTMEoLvfk7qlaoc9UZqR_XPlDDTjQ6b3h5-4T5NqsOiPyI-9Yu3f-lucYJzsaTsEzNFqf96Iuv5m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnI58Ych78NgAm-38KEviODho01XOI8WX1vcylopEpInUejVGlqfATF2bQ89JHnUIU7mjuXzPG2mWus9r6FY9PnQkIyR51z8wptz9Jw9Md8uu&lib=Mo8VE8k0RDiMFoWgsOCfus6p2LKAu40em"
+    fetch(url).then(response => response.json()).then(data => {
+      let totalHours = 0;
+      for(let value of Object.values(data)) {
+        totalHours += parseFloat(value);
+      }
+      totalHours = totalHours.toFixed(2);
+
       var txt = document.createElement("span");
-      var totalHours = data.valueOf();
       let hours = parseInt(totalHours);
       let min = parseInt((totalHours - hours) * 60);
       var output = hours + " hours and " + min + " minutes";
-      txt.innerHTML = numbers;
+      txt.innerHTML = totalHours;
       console.log("Fetched hours from spreadsheet: " + output);
       setHoursString(output);
+
+      const formattedData = Object.keys(data).map(day => ({
+        date: day,
+        hours: parseFloat(data[day])
+    }));
+      setDayHours(formattedData)
     })
 
     //parse and store the member data
@@ -35,8 +65,8 @@ function App() {
                     header: true,
                     skipEmptyLines: true,
                     complete: (results) => {
-                        console.log("results: ");
-                        console.log(results);
+                        //console.log("results: ");
+                        //console.log(results);
                         setMembers(results.data);
                     },
                 });
@@ -352,13 +382,23 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <h4 style={{ display: "inline" }}>
-              The 2023-24 machine has been completed with the theme of&nbsp;
-              <i>Magic and Fantasy</i>. This year we have put a total
-              of {hoursString} into our machine!
-              This year we finished 1st at the National Rube Goldberg Machine Contest, winning the best
-              last step and people's choice awards. To see more about the machine,
-              check out our socials.
+              The 2024-25 machine will have the theme of&nbsp;
+              <i>The Wild West</i>. We have put a total
+              of {hoursString} into our machine so far this year! 
+              To see more about the machine, check out our socials. 
+              Below is a plot of our hours on the machine over time.
             </h4>
+            <br/> <br/>
+            <ResponsiveContainer width="100%" height={400}>
+            <BarChart data={dayHours}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="date" label={{ value: 'Date', position: 'insideBottom', offset: 0 }}/>
+                <YAxis label={{ value: 'Hours', angle: -90, position: 'insideLeft' }}/>
+                <Tooltip content={<CustomTooltip />}/>
+                <Bar dataKey="hours" fill="#ffc02a" />
+            </BarChart>
+          </ResponsiveContainer>
+
           </div>
         </div>
         <div className="boxed" id="about us" />
