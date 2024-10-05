@@ -2,7 +2,7 @@ import './App.css';
 import './W3Schools.css';
 import { useState, useEffect } from "react";
 import Papa from 'papaparse'; // for csv parsing
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -28,14 +28,19 @@ function App() {
   const [hoursString, setHoursString] = useState("");
   const [dayHours, setDayHours] = useState([])
   const [members, setMembers] = useState([]);
+  const [byWeek, setByWeek] = useState(false)
 
 
   //useEffect hook will only run a single time when the website is initally rendered,
   //due to the empty [] dependency array at the end.
   useEffect(() => {
     //update the hoursString
-    const url = "https://script.googleusercontent.com/macros/echo?user_content_key=wfwxEQ6whRl41N64NgSDUmTMEoLvfk7qlaoc9UZqR_XPlDDTjQ6b3h5-4T5NqsOiPyI-9Yu3f-lucYJzsaTsEzNFqf96Iuv5m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnI58Ych78NgAm-38KEviODho01XOI8WX1vcylopEpInUejVGlqfATF2bQ89JHnUIU7mjuXzPG2mWus9r6FY9PnQkIyR51z8wptz9Jw9Md8uu&lib=Mo8VE8k0RDiMFoWgsOCfus6p2LKAu40em"
-    fetch(url).then(response => response.json()).then(data => {
+    const url = "https://script.google.com/macros/s/AKfycbxmxv5xBwQbyV30R-db_NcGsGFKgCKUVRE0lMMIPOgPLep6GczGD2O2GYvuuHNPa2-u1w/exec"
+    fetch(url).then(response => response.json()).then(data_obj => {
+      console.log(data_obj)
+      let data = data_obj.hours
+      setByWeek(data_obj.byWeek)
+
       let totalHours = 0;
       for(let value of Object.values(data)) {
         totalHours += parseFloat(value);
@@ -45,15 +50,26 @@ function App() {
       var txt = document.createElement("span");
       let hours = parseInt(totalHours);
       let min = parseInt((totalHours - hours) * 60);
-      var output = hours + " hours and " + min + " minutes";
+
+      // format the hours string
+      var output = hours;
+      if (hours === 1) output += " hour";
+      else output += " hours";
+      output += " and " + min;
+      if (min === 1) output += " minute";
+      else output += " minutes";
+
       txt.innerHTML = totalHours;
       console.log("Fetched hours from spreadsheet: " + output);
       setHoursString(output);
 
+      // process the bar graph data
       const formattedData = Object.keys(data).map(day => ({
         date: day,
         hours: parseFloat(data[day])
     }));
+      console.log('received hours data:')
+      console.log(formattedData)
       setDayHours(formattedData)
     })
 
@@ -392,7 +408,7 @@ function App() {
             <ResponsiveContainer width="100%" height={400}>
             <BarChart data={dayHours}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" label={{ value: 'Date', position: 'insideBottom', offset: 0 }}/>
+                <XAxis dataKey="date" label={{ value: byWeek ? "Week of" : "Day", position: 'insideBottom', offset: 0 }}/>
                 <YAxis label={{ value: 'Hours', angle: -90, position: 'insideLeft' }}/>
                 <Tooltip content={<CustomTooltip />}/>
                 <Bar dataKey="hours" fill="#ffc02a" />
