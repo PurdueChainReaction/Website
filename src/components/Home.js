@@ -263,7 +263,7 @@ function App() {
           {/* Navbar on small screens */}
           <div
             id="navDemo"
-            className="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-large"
+            className="w3-bar-block w3-show w3-hide-large w3-hide-medium w3-large"
             style={{ color: "var(--navBarText)", fontFamily: '"text"' }}
           >
             <a
