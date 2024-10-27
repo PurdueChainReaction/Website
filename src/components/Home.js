@@ -34,6 +34,26 @@ function App() {
   //useEffect hook will only run a single time when the website is initally rendered,
   //due to the empty [] dependency array at the end.
   useEffect(() => {
+    const generateDate = (dateString) => {
+      const [month, day] = dateString.split('/').map(Number); // Convert to numbers
+      return new Date(new Date().getFullYear(), month - 1, day); // Month is zero-based
+    }
+
+    const generateDateRange = (startDate, endDate) => {
+      const dateArray = [];
+
+      let currentDate = generateDate(startDate);
+      let lastDate = generateDate(endDate);
+      while (currentDate <= lastDate) {
+        const month = String(currentDate.getMonth() + 1); // getMonth() is zero-based
+        const day = String(currentDate.getDate());
+        dateArray.push(`${month}/${day}`);
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+      return dateArray;
+    };
+
+
     //update the hoursString
     const url = "https://script.google.com/macros/s/AKfycbxmxv5xBwQbyV30R-db_NcGsGFKgCKUVRE0lMMIPOgPLep6GczGD2O2GYvuuHNPa2-u1w/exec"
     fetch(url).then(response => response.json()).then(data_obj => {
@@ -70,7 +90,34 @@ function App() {
     }));
       console.log('received hours data:')
       console.log(formattedData)
-      setDayHours(formattedData)
+
+      // fill in the data
+      const dailyData = formattedData;
+      const startDate = dailyData.length > 0 ? dailyData[0].date : null;
+      const endDate = dailyData.length > 0 ? dailyData[dailyData.length - 1].date : null;
+
+      let filledDailyCnt = null;
+      if (startDate && endDate) {
+        console.log(startDate)
+        console.log(endDate)
+        const allDates = generateDateRange(startDate, endDate);
+        const dataMap = new Map(dailyData.map(day => [day.date, day.hours]));
+        // Fill in missing dates with 0
+        console.log('alldates:')
+        console.log(allDates)
+
+        console.log('datamap:')
+        console.log(dataMap)
+
+        filledDailyCnt = allDates.map(date => 
+          ({
+            date: date,
+            hours: dataMap.get(date) || 0
+          }));
+      }
+      console.log("filledDailyCnt: ")
+      console.log(filledDailyCnt)
+      setDayHours(filledDailyCnt)
     })
 
     //parse and store the member data
@@ -542,7 +589,7 @@ function App() {
         {/*
 <div class="sponsor" id="sponsor"></div>
 <h2 class="title">Sponsors</h2>
-<div class="sponsor">
+<div class="sponsor">f
   <div class="sponsor-list sponsor-item" style="width:310px; height:125px;">
       Image of sponsor that links to their website
       <a href="https://zyynlabs.com/" target="_blank"><img src="Images/zyynlabs.png" alt="ZyynLabs" style="width:300px; height:92px;"/></a>
