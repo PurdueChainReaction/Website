@@ -91,17 +91,21 @@ function App() {
       console.log('received hours data:')
       console.log(formattedData)
 
+      
+      let filledDailyCnt = null;
+      
+      if(!byWeek){
       // fill in the data
       const dailyData = formattedData;
       const startDate = dailyData.length > 0 ? dailyData[0].date : null;
       const endDate = dailyData.length > 0 ? dailyData[dailyData.length - 1].date : null;
+      const dataMap = new Map(dailyData.map(day => [day.date, day.hours]));
 
-      let filledDailyCnt = null;
+
       if (startDate && endDate) {
         console.log(startDate)
         console.log(endDate)
         const allDates = generateDateRange(startDate, endDate);
-        const dataMap = new Map(dailyData.map(day => [day.date, day.hours]));
         // Fill in missing dates with 0
         console.log('alldates:')
         console.log(allDates)
@@ -115,6 +119,10 @@ function App() {
             hours: dataMap.get(date) || 0
           }));
       }
+    } else{
+      filledDailyCnt = formattedData
+    }
+
       console.log("filledDailyCnt: ")
       console.log(filledDailyCnt)
       setDayHours(filledDailyCnt)
@@ -134,7 +142,7 @@ function App() {
                     },
                 });
             });
-  }, []);
+  }, [byWeek]);
 
   // This defines a "BRGT event" react component that is rendered later in the jsx return function.
   // The line below ignores annoying linter errors when the BRGTevent is commented out
