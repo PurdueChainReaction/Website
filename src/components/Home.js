@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Papa from 'papaparse'; // for csv parsing
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 
-const CustomTooltip = ({ active, payload }) => {
+const CustomTooltip = ({ active, payload, byWeek }) => {
   if (active && payload && payload.length) {
     return (
       <div style={{
@@ -14,7 +14,7 @@ const CustomTooltip = ({ active, payload }) => {
         padding: '10px',
         boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
       }}>
-        <p style={{ color: '#000' }}>{`Date: ${payload[0].payload.date}`}</p>
+        <p style={{ color: '#000' }}>{`${byWeek ? 'Week of: ' : 'Date:'} ${payload[0].payload.date}`}</p>
         <p style={{ color: '#cc9102' }}>{`Hours: ${payload[0].value}`}</p>
       </div>
     );
@@ -465,7 +465,7 @@ function App() {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="date" label={{ value: byWeek ? "Week of" : "Day", position: 'insideBottom', offset: 0 }}/>
                 <YAxis label={{ value: 'Hours', angle: -90, position: 'insideLeft' }}/>
-                <Tooltip content={<CustomTooltip />}/>
+                <Tooltip content={<CustomTooltip byWeek={byWeek}/>}/>
                 <Bar dataKey="hours" fill="#ffc02a" />
             </BarChart>
           </ResponsiveContainer>
