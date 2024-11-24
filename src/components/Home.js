@@ -94,7 +94,7 @@ function App() {
       
       let filledDailyCnt = null;
       
-      if(!byWeek){
+      if(data_obj.byWeek === false){
       // fill in the data
       const dailyData = formattedData;
       const startDate = dailyData.length > 0 ? dailyData[0].date : null;
