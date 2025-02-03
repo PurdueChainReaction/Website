@@ -8,9 +8,9 @@ const CustomTooltip = ({ active, payload, byWeek }) => {
   if (active && payload && payload.length) {
     return (
       <div style={{
-        backgroundColor: '#fff', 
-        border: '1px solid #ccc', 
-        borderRadius: '8px', 
+        backgroundColor: '#fff',
+        border: '1px solid #ccc',
+        borderRadius: '8px',
         padding: '10px',
         boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
       }}>
@@ -34,24 +34,61 @@ function App() {
   //useEffect hook will only run a single time when the website is initally rendered,
   //due to the empty [] dependency array at the end.
   useEffect(() => {
-    const generateDate = (dateString) => {
-      const [month, day] = dateString.split('/').map(Number); // Convert to numbers
-      return new Date(new Date().getFullYear(), month - 1, day); // Month is zero-based
-    }
+    // const generateDate = (dateString) => {
+    //   const [month, day] = dateString.split('/').map(Number); // Convert to numbers
+    //   return new Date(new Date().getFullYear(), month - 1, day); // Month is zero-based
+    // }
 
-    const generateDateRange = (startDate, endDate) => {
+    const generateDateRange = (startDate, endDate, byWeek = false) => {
       const dateArray = [];
 
-      let currentDate = generateDate(startDate);
-      let lastDate = generateDate(endDate);
+      // let currentDate = generateDate(startDate);
+      // let lastDate = generateDate(endDate);
+      let currentDate = startDate
+      let lastDate = endDate
+
+      let dayDelta = byWeek ? 7 : 1;
+
       while (currentDate <= lastDate) {
         const month = String(currentDate.getMonth() + 1); // getMonth() is zero-based
         const day = String(currentDate.getDate());
         dateArray.push(`${month}/${day}`);
-        currentDate.setDate(currentDate.getDate() + 1);
+        currentDate.setDate(currentDate.getDate() + dayDelta);
       }
       return dateArray;
     };
+
+
+    const calcYear = (date) => {
+      let today = new Date();
+      let isSpring = ((today.getMonth() + 1) < 8)
+
+      let month = parseInt(date.slice(0, date.indexOf('/')));
+
+      if (isSpring) {
+        if (month >= 8) {
+          return (parseInt(today.getFullYear()) - 1)
+        } else {
+          return (parseInt(today.getFullYear()))
+        }
+      } else {
+        if (month >= 8) {
+          return (parseInt(today.getFullYear()))
+        } else {
+          return (parseInt(today.getFullYear()) + 1)
+        }
+      }
+    }
+
+    function roundToNearestSunday(date) {
+      const dayOfWeek = date.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+      const daysToSunday = dayOfWeek < 4 ? -dayOfWeek : 7 - dayOfWeek;
+
+      const roundedDate = new Date(date);
+      roundedDate.setDate(date.getDate() + daysToSunday);
+
+      return roundedDate;
+    }
 
 
     //update the hoursString
@@ -62,7 +99,7 @@ function App() {
       setByWeek(data_obj.byWeek)
 
       let totalHours = 0;
-      for(let value of Object.values(data)) {
+      for (let value of Object.values(data)) {
         totalHours += parseFloat(value);
       }
       totalHours = totalHours.toFixed(2);
@@ -83,29 +120,50 @@ function App() {
       console.log("Fetched hours from spreadsheet: " + output);
       setHoursString(output);
 
+
       // process the bar graph data
-      const formattedData = Object.keys(data).map(day => ({
+      let formattedData = Object.keys(data).map(day => ({
         date: day,
-        hours: parseFloat(data[day])
-    }));
+        hours: parseFloat(data[day]),
+        dateObj: new Date(`${calcYear(day)}/${day}`)
+      }));
+
+      // round the dates to the nearest sunday if byWeek is true
+      if (data_obj.byWeek) {
+        formattedData = formattedData.map(obj => {
+          const roundedDate = roundToNearestSunday(obj.dateObj);
+          return {
+            date: `${roundedDate.getMonth() + 1}/${roundedDate.getDate()}`,
+            hours: obj.hours,
+            dateObj: roundedDate
+          }
+        });
+      }
       console.log('received hours data:')
       console.log(formattedData)
 
-      
+
+      // sort the dates chronologically
+      let sortedDates = formattedData.sort((a, b) => {
+        return a.dateObj - b.dateObj;
+      });
+
       let filledDailyCnt = null;
-      
-      if(data_obj.byWeek === false){
+
+
       // fill in the data
-      const dailyData = formattedData;
-      const startDate = dailyData.length > 0 ? dailyData[0].date : null;
-      const endDate = dailyData.length > 0 ? dailyData[dailyData.length - 1].date : null;
-      const dataMap = new Map(dailyData.map(day => [day.date, day.hours]));
+      const startDate = sortedDates.length > 0 ? sortedDates[0].dateObj : null;
+      const endDate = sortedDates.length > 0 ? sortedDates[sortedDates.length - 1].dateObj : null;
+      const dataMap = new Map(sortedDates.map(day => [day.date, day.hours]));
 
-
+      // if (data_obj.byWeek) {
+      //   filledDailyCnt = formattedData
+      // } else {
       if (startDate && endDate) {
         console.log(startDate)
         console.log(endDate)
-        const allDates = generateDateRange(startDate, endDate);
+        const allDates = generateDateRange(startDate, endDate, data_obj.byWeek);
+
         // Fill in missing dates with 0
         console.log('alldates:')
         console.log(allDates)
@@ -113,15 +171,13 @@ function App() {
         console.log('datamap:')
         console.log(dataMap)
 
-        filledDailyCnt = allDates.map(date => 
-          ({
-            date: date,
-            hours: dataMap.get(date) || 0
-          }));
+        filledDailyCnt = allDates.map(date =>
+        ({
+          date: date,
+          hours: dataMap.get(date) || 0
+        }));
       }
-    } else{
-      filledDailyCnt = formattedData
-    }
+      // }
 
       console.log("filledDailyCnt: ")
       console.log(filledDailyCnt)
@@ -130,19 +186,19 @@ function App() {
 
     //parse and store the member data
     fetch('members.csv')
-            .then((response) => response.text())
-            .then((csvText) => {
-                Papa.parse(csvText, {
-                    header: true,
-                    skipEmptyLines: true,
-                    complete: (results) => {
-                        //console.log("results: ");
-                        //console.log(results);
-                        setMembers(results.data);
-                    },
-                });
-            });
-  }, [byWeek]);
+      .then((response) => response.text())
+      .then((csvText) => {
+        Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            //console.log("results: ");
+            //console.log(results);
+            setMembers(results.data);
+          },
+        });
+      });
+  }, []);
 
   // This defines a "BRGT event" react component that is rendered later in the jsx return function.
   // The line below ignores annoying linter errors when the BRGTevent is commented out
@@ -185,7 +241,7 @@ function App() {
             </h4>
           </div>
         </div>
-       
+
         {/* Google maps window: Go to here to create a different one: https://www.embed-map.com/ */}
         <center>
           <div
@@ -455,20 +511,20 @@ function App() {
             <h4 style={{ display: "inline" }}>
               The 2024-25 machine will have the theme of&nbsp;
               <i>The Wild West</i>. We have put a total
-              of {hoursString} into our machine so far this year! 
-              To see more about the machine, check out our socials. 
+              of {hoursString} into our machine so far this year!
+              To see more about the machine, check out our socials.
               Below is a plot of our hours on the machine over time.
             </h4>
-            <br/> <br/>
+            <br /> <br />
             <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={dayHours}>
+              <BarChart data={dayHours}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="date" label={{ value: byWeek ? "Week of" : "Day", position: 'insideBottom', offset: 0 }}/>
-                <YAxis label={{ value: 'Hours', angle: -90, position: 'insideLeft' }}/>
-                <Tooltip content={<CustomTooltip byWeek={byWeek}/>}/>
+                <XAxis dataKey="date" label={{ value: byWeek ? "Week of" : "Day", position: 'insideBottom', offset: 0 }} />
+                <YAxis label={{ value: 'Hours', angle: -90, position: 'insideLeft' }} />
+                <Tooltip content={<CustomTooltip byWeek={byWeek} />} />
                 <Bar dataKey="hours" fill="#ffc02a" />
-            </BarChart>
-          </ResponsiveContainer>
+              </BarChart>
+            </ResponsiveContainer>
 
           </div>
         </div>
@@ -478,39 +534,39 @@ function App() {
           <p></p>
           <center>Click on one of us to meet the whole team</center>
           <p />
-          
-            {/*Every image links to members page*/}
-            {members[0] && (
-              <div className="sponsor people-list">
+
+          {/*Every image links to members page*/}
+          {members[0] && (
+            <div className="sponsor people-list">
               <div className="sponsor-list people">
-              <a href="members">
-                <img src={"/MemberImages/"+members[0].picture} alt="President" />
-              </a>
+                <a href="members">
+                  <img src={"/MemberImages/" + members[0].picture} alt="President" />
+                </a>
+              </div>
+              <div className="sponsor-list people">
+                <a href="members">
+                  <img src={"/MemberImages/" + members[1].picture} alt="Captain" />
+                </a>
+              </div>
+              <div className="sponsor-list people">
+                <a href="members">
+                  <img src={"/MemberImages/" + members[2].picture} alt="Treasurer" />
+                </a>
+              </div>
+              <div className="sponsor-list people">
+                <a href="members">
+                  <img src={"/MemberImages/" + members[3].picture} alt="Vice President" />
+                </a>
+              </div>
+              <div className="sponsor-list people">
+                <a href="members">
+                  <img src={"/MemberImages/" + members[4].picture} alt="First Mate" />
+                </a>
+              </div>
             </div>
-            <div className="sponsor-list people">
-              <a href="members">
-                <img src={"/MemberImages/"+members[1].picture} alt="Captain" />
-              </a>
-            </div>
-            <div className="sponsor-list people">
-              <a href="members">
-                <img src={"/MemberImages/"+members[2].picture} alt="Treasurer" />
-              </a>
-            </div>
-            <div className="sponsor-list people">
-              <a href="members">
-                <img src={"/MemberImages/"+members[3].picture} alt="Vice President" />
-              </a>
-            </div>
-            <div className="sponsor-list people">
-              <a href="members">
-                <img src={"/MemberImages/"+members[4].picture} alt="First Mate" />
-              </a>
-            </div>
-            </div>
-            )}
-            
-          </div>
+          )}
+
+        </div>
         <div className="boxed" id="history" />
         <h2 className="title">History</h2>
         <div className="boxed">
@@ -651,7 +707,7 @@ function App() {
                 <i className="fa fa-envelope w3-xlarge w3-text-light-grey" />
               </span>
               <a href="mailto:boilerrubegoldberg@gmail.com">
-              boilerrubegoldberg@gmail.com
+                boilerrubegoldberg@gmail.com
               </a>
             </h5>
           </div>
