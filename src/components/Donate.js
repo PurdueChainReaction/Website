@@ -127,7 +127,7 @@ function Donate() {
                                     <th>Recognition</th>
                                 </tr>
                                 <tr>
-                                    <td>$2500+</td>
+                                    <td>$1000+</td>
                                     <td>Machine Mastermind</td>
                                     <td>
                                         Listing on Social Media and Website, Group Workshop Tour*,
@@ -135,7 +135,7 @@ function Donate() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>$1000 - $2500</td>
+                                    <td>$500 - $1000</td>
                                     <td>Module Architect</td>
                                     <td>
                                         Listing on Social Media and Website, Group Workshop Tour*, Name
@@ -143,7 +143,7 @@ function Donate() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>$100 - $1000</td>
+                                    <td>$100 - $500</td>
                                     <td>Step Builder</td>
                                     <td>Listing on Website, Social Media, and T-shirt</td>
                                 </tr>
