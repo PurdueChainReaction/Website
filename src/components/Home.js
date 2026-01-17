@@ -92,7 +92,7 @@ function App() {
 
 
     //update the hoursString
-    const url = "https://script.google.com/macros/s/AKfycbxmxv5xBwQbyV30R-db_NcGsGFKgCKUVRE0lMMIPOgPLep6GczGD2O2GYvuuHNPa2-u1w/exec"
+    const url = "https://script.google.com/macros/s/AKfycbx4-Ue7tmGGsYA7i7mPXKtna3CadFkZpWQ3s7YE5Enxh4meEFuuHZoPUAnF4bS1W9tC/exec"
     fetch(url).then(response => response.json()).then(data_obj => {
       console.log(data_obj)
       let data = data_obj.hours
