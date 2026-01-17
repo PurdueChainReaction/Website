@@ -509,8 +509,8 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <h4 style={{ display: "inline" }}>
-              The 2024-25 machine will have the theme of&nbsp;
-              <i>The Wild West</i>. We have put a total
+              The 2025-26 machine will have the theme of&nbsp;
+              <i>Haunted Mansion</i>. We have put a total
               of {hoursString} into our machine so far this year!
               To see more about the machine, check out our socials.
               Below is a plot of our hours on the machine over time.
@@ -572,12 +572,12 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <div className="game-image">
-              <img src="/TeamPhoto2024.webp" alt="Team" preload="none" />
+              <img src="/TeamPhoto2025.webp" alt="Team" preload="none" />
             </div>
             <div className="store-text-description">
               <span>
                 <i>
-                  The 2022-2023 Team (shown above) was composed of a variety of
+                  The 2024-2025 Team (shown above) was composed of a variety of
                   talented and dedicated individuals who put in over three thousand
                   hours to build an incredible machine.
                 </i>

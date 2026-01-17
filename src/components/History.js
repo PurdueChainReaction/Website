@@ -92,7 +92,7 @@ function History() {
                             <br />
                             Over the years we have grown and established ourselves as a top
                             competitor in the national competition and beyond, placing 1st in the
-                            last 2 competitions post-pandemic in 2022 and 2023, and finishing
+                            last 4 competitions post-pandemic in 2022 through 2025, and finishing
                             top-2 for each of the last 8 competitions dating back to 2014. On top
                             of our success at competition, our organization has some very
                             prestigious accomplishments including breaking the Guinness Book of
@@ -120,9 +120,16 @@ function History() {
                     </div>
                 </div>
                 <h2 className="title">Past Machines</h2>
+                <HistoryYear year="2025"
+                    ytLink="https://www.youtube.com/embed/_sDxm73mzxo?si=bWdDnTkNe3JaY-Dl"
+                    finalStep="Feed a Pet"
+                    theme="The Wild West"
+                    steps="120"
+                    result="Won 1st Place at National Competition. Awarded people's choice, best last step, artistry, and most hilarious awards."
+                />
                 <HistoryYear year="2024"
                     ytLink="https://www.youtube.com/embed/WSJG7OMH7gg?si=8oKiLTl5O_y_NuyE"
-                    finalStep="Put toothpaste on a toothbrush"
+                    finalStep="Put Toothpaste on a Toothbrush"
                     theme="Fantasy"
                     steps="120"
                     result="Won 1st Place at National Competition. Awarded best last step and people's choice awards."

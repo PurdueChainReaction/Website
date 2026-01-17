@@ -57,16 +57,16 @@ function Outreach() {
           <div className="game-image">
             <h2 className="title">How to Book</h2>
             <h4 className="store-text-description">
-              Setting up meeting is very easy! Just contact us via email listed
+              Setting up a meeting is very easy! Just contact us via email listed
               below! We would be happy to set up a date and time for your meeting.
               As a team, we are always excited to volunteer our time and travel with
-              or without the machine whenever possible. If in person will not work
+              or without the machine whenever possible. If in-person will not work,
               or you are located too far from our headquaters in West Lafayette, no
               problem! We are more than willing to work with you to set up a virtual
-              meeting whenever necessary. Once you book a time and date, availible
-              memebers will attend your event and show case what we do as a club.
-              Machine visits, however, due to our building and competition period
-              are limited to August in the Fall and April and May in the spring.
+              meeting whenever necessary. Once you book a time and date, available
+              members will attend your event and showcase what we do as a club.
+              Machine visits are limited to August in the Fall or April and May 
+              in the Spring due to our building and competition period.
             </h4>
           </div>
           <div className="game-image">
