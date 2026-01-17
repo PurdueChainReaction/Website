@@ -44,7 +44,7 @@ function Donate() {
                 </h2>
                 <div className="boxed-list">
                     <div className="game-image">
-                        <img src="/TeamPhoto2024.webp" alt="Team" preload="none" />
+                        <img src="/TeamPhoto2025.webp" alt="Team" preload="none" />
                     </div>
                 </div>
                 <div className="boxed-list">
@@ -61,10 +61,10 @@ function Donate() {
                             friends who admire what we do, so every contribution we get directly
                             impacts our ability to continue to build incredible machines and give
                             back to the community around us. A donation of supplies is just as
-                            beneficial to our team as a monetary donation; We go through a
+                            beneficial to our team as a monetary donation; we go through a
                             significant amount of lumber every year and use an assortment of power
                             tools, electrical components, scrap metal, motors, and other random
-                            items on machines every year, and who knows, if your generosity leads
+                            items on machines every year. Who knows, if your generosity leads
                             you to donate items to the team, you may be able to spot your item on
                             our next machine! That being said, we do have yearly costs outside of
                             just tools and supplies, so please consider making a financial
@@ -153,7 +153,7 @@ function Donate() {
                             <br />
                             *Listings and Logos on T-shirt can only be facilitated for donations
                             up to January 1st due to the production of the shirts after that date.
-                            Recognition for donors will still appear in it’s entirety on the
+                            Recognition for donors will still appear in its entirety on the
                             website* <br />
                             <br />
                             **Tours of workshop are subject to Purdue's COVID-19 regulations
