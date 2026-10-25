@@ -90,9 +90,9 @@ function App() {
       return roundedDate;
     }
 
-
     //update the hoursString
-    const url = "https://script.google.com/macros/s/AKfycbx4-Ue7tmGGsYA7i7mPXKtna3CadFkZpWQ3s7YE5Enxh4meEFuuHZoPUAnF4bS1W9tC/exec"
+    // Current stirng is for Jungle Temple (2026-27) - K
+    const url = "https://script.google.com/macros/s/AKfycbxlxZQQu_HGYz3tY997KnExp5KZMMua5E_TI9ZxBI5yfTN0BpOL2AuDiGoGor9xgP_i/exec"
     fetch(url).then(response => response.json()).then(data_obj => {
       console.log(data_obj)
       let data = data_obj.hours
@@ -509,8 +509,8 @@ function App() {
         <div className="boxed">
           <div className="boxed-list">
             <h4 style={{ display: "inline" }}>
-              The 2025-26 machine will have the theme of&nbsp;
-              <i>Haunted Mansion</i>. We have put a total
+              The 2026-27 machine will have the theme of&nbsp;
+              <i>Jungle Temple</i>. We have put a total
               of {hoursString} into our machine so far this year!
               To see more about the machine, check out our socials.
               Below is a plot of our hours on the machine over time.
