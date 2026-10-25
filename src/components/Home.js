@@ -92,7 +92,10 @@ function App() {
 
     //update the hoursString
     // Current stirng is for Jungle Temple (2026-27) - K
-    const url = "https://script.google.com/macros/s/AKfycbxlxZQQu_HGYz3tY997KnExp5KZMMua5E_TI9ZxBI5yfTN0BpOL2AuDiGoGor9xgP_i/exec"
+    const url = "https://script.google.com/macros/s/AKfycbxbakC_97-0dePI8PXCa0abQ8ifskbr9g8uLfw7xEs8vMVBogr1_tIB6fOhNG3Y_2Ou/exec"
+  //web app thingy (version 2) "https://script.google.com/macros/s/AKfycbxbakC_97-0dePI8PXCa0abQ8ifskbr9g8uLfw7xEs8vMVBogr1_tIB6fOhNG3Y_2Ou/exec"
+  //hours logger (new) "https://script.google.com/macros/s/AKfycbxlxZQQu_HGYz3tY997KnExp5KZMMua5E_TI9ZxBI5yfTN0BpOL2AuDiGoGor9xgP_i/exec"
+  //hours logger (old) "https://script.google.com/macros/s/AKfycbx4-Ue7tmGGsYA7i7mPXKtna3CadFkZpWQ3s7YE5Enxh4meEFuuHZoPUAnF4bS1W9tC/exec"
     fetch(url).then(response => response.json()).then(data_obj => {
       console.log(data_obj)
       let data = data_obj.hours
